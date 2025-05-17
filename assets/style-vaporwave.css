@@ -1,0 +1,43 @@
+body {
+  font-family: 'Courier New', monospace;
+  background: linear-gradient(135deg, #ff9ff3, #feca57);
+  color: #2d3436;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.7;
+}
+
+h1, h2 {
+  color: #341f97;
+  text-shadow: 1px 1px #f3a683;
+}
+
+a {
+  color: #10ac84;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #00d2d3;
+}
+
+nav {
+  background-color: #ff6b6b;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #333;
+}

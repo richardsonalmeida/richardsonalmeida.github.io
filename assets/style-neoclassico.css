@@ -1,0 +1,42 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f7f9fb;
+  color: #222;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.75;
+}
+
+h1, h2 {
+  color: #003366;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+a {
+  color: #006699;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  margin: 1rem 0 2rem;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #666;
+}

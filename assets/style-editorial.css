@@ -1,0 +1,43 @@
+body {
+  font-family: 'Merriweather', serif;
+  background-color: #ffffff;
+  color: #111;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+
+h1, h2, h3 {
+  color: #000;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+a {
+  color: #1a8917;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #126d14;
+}
+
+nav {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  margin-right: 15px;
+  font-weight: bold;
+  color: #444;
+}
+
+footer {
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #999;
+  text-align: center;
+}
