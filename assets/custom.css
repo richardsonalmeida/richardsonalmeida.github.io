@@ -1,15 +1,19 @@
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f9f9f9;
-  color: #222;
-  line-height: 1.6;
+/* Esconde link que contenha "subscribe via RSS" */
+a[href*="feed.xml"],
+a:contains("subscribe via RSS"),
+a[href*="rss"] {
+  display: none !important;
 }
 
-h1, h2 {
-  color: #004488;
+/* Alternativa mais agressiva */
+body a {
+  display: inline;
 }
 
-a {
-  color: #007acc;
-  text-decoration: none;
+body a::after {
+  content: "";
+}
+
+footer a[href*="feed.xml"] {
+  display: none !important;
 }

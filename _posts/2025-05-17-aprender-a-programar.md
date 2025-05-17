@@ -3,6 +3,7 @@ layout: post
 title: "Por Que Aprender a Programar Pode Mudar a Sua Vida"
 date: 2025-05-17
 categories: [educação, tecnologia, carreira, desenvolvimento-pessoal]
+author: Richardson Almeida
 ---
 
 ## Por Que Aprender a Programar Pode Mudar a Sua Vida
