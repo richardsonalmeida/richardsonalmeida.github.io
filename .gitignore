@@ -1,12 +1,8 @@
 _site
-.sass-cache
 .jekyll-cache
+.sass-cache
 .jekyll-metadata
 vendor
-# arquivos do sistema
 .DS_Store
 Thumbs.db
-
-# logs
 *.log
-
