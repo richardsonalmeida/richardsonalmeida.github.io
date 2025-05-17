@@ -1,24 +1,7 @@
 {% unless page.feed %}
-
-<!-- Hotmart Widget (site only) -->
-<script type="text/javascript">
-  function importHotmart(){ 
-    var imported = document.createElement('script'); 
-    imported.src = 'https://static.hotmart.com/checkout/widget.min.js'; 
-    document.head.appendChild(imported); 
-    var link = document.createElement('link'); 
-    link.rel = 'stylesheet'; 
-    link.type = 'text/css'; 
-    link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css'; 
-    document.head.appendChild(link); 
-  } 
-  importHotmart(); 
-</script>
-
-<div class="hotmart-botao">
-  <a href="https://pay.hotmart.com/R99150419X?checkoutMode=2" class="hotmart-fb hotmart__button-checkout" target="_blank">
-    <img src="https://static.hotmart.com/img/btn-buy-green.png" alt="Acessar a Cartilha e Começar Agora">
+<div class="cta-cartilha">
+  <a class="botao-hotmart" href="https://pay.hotmart.com/R99150419X?checkoutMode=2" target="_blank" rel="noopener noreferrer">
+    📘 Baixar Cartilha de Introdução à Programação
   </a>
 </div>
-
 {% endunless %}

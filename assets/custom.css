@@ -1,3 +1,20 @@
-.hotmart-botao {
-  margin-top: 1rem;
+.cta-cartilha {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.botao-hotmart {
+  background-color: #32CD32; /* Verde Hotmart */
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.botao-hotmart:hover {
+  background-color: #2eaa2e;
 }
