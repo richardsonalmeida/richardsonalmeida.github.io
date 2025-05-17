@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Blog of Richardson
+title: Diário de Bordo
 email: almeidaarichardson@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
  Olá! Sou Richardson, e transformo minha vivência em TI e serviço público em conteúdos acessíveis sobre tecnologia, automação e produtividade. Se você busca clareza para aprender, ensinar ou inovar com propósito, este espaço é seu também."

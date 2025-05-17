@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Produtos Recomendados
+title: Produtos
 permalink: /produtos/
 ---
 
