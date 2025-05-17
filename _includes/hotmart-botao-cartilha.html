@@ -1,3 +1,4 @@
+<!-- Hotmart Widget (site only) -->
 <script type="text/javascript">
   function importHotmart(){ 
     var imported = document.createElement('script'); 
@@ -12,11 +13,8 @@
   importHotmart(); 
 </script>
 
-{% unless page.feed %}
-
-<div style="margin-top: 1rem;">
-  <a href="https://pay.hotmart.com/R99150419X?checkoutMode=2" class="hotmart-fb hotmart__button-checkout">
-    <img src='https://static.hotmart.com/img/btn-buy-green.png' alt="Acessar a Cartilha e Começar Agora">
+<div class="hotmart-botao">
+  <a href="https://pay.hotmart.com/R99150419X?checkoutMode=2" class="hotmart-fb hotmart__button-checkout" target="_blank">
+    <img src="https://static.hotmart.com/img/btn-buy-green.png" alt="Acessar a Cartilha e Começar Agora">
   </a>
 </div>
-{% endunless %}
