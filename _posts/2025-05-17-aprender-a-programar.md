@@ -31,7 +31,11 @@ Pensar com clareza. Agir com método. Construir com propósito.
 
 Se você deseja começar essa jornada com o pé direito, recomendo fortemente que baixe a **Cartilha de Introdução à Programação**, preparada com muito cuidado para iniciantes.
 
+{% unless page.feed %}
+
 {% include hotmart-botao-cartilha.html %}
+
+{% endunless %}
 
 ---
 
