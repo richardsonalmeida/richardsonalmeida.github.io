@@ -1,7 +1,9 @@
 {% unless page.feed %}
+<link rel="stylesheet" href="{{ '/assets/style-botao-digital.css' | relative_url }}">
 <div class="cta-cartilha">
-  <a class="botao-hotmart" href="https://pay.hotmart.com/R99150419X?checkoutMode=2" target="_blank" rel="noopener noreferrer">
-    📘 Baixar Cartilha de Introdução à Programação
+  <a href="https://pay.hotmart.com/R99150419X?checkoutMode=2" target="_blank" rel="noopener noreferrer" class="botao-digital">
+    <img src="{{ '/assets/images/imagem-botao-comprar.png' | relative_url }}" alt="Botão Comprar com Digital" class="botao-digital-img">
+    <span class="botao-digital-label">Quero Começar Agora!</span>
   </a>
 </div>
 {% endunless %}

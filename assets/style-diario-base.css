@@ -1,0 +1,67 @@
+/* =============================
+   Estilo Base: Diário com Post-it
+   Modularizado para uso com variáveis CSS
+============================= */
+
+.diary-layout {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+
+.diary-postit {
+  position: relative;
+  width: 160px;
+  background-color: var(--postit-color, #fff8b0);
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.diary-postit::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: var(--pin-color, red);
+  border-radius: 50%;
+  border: 2px solid var(--background-color, #fff);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.diary-img {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(80%) contrast(1.2);
+  opacity: 0.95;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.diary-meta {
+  flex: 1;
+  min-width: 220px;
+}
+
+.diary-title {
+  font-size: 1.7rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: bold;
+  color: inherit;
+}
+
+.diary-date {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  font-style: italic;
+}

@@ -1,0 +1,21 @@
+{% comment %}
+  Componente reutilizável de cabeçalho de diário com imagem desenhada em post-it e metadados
+  Parâmetros esperados:
+  - image: caminho da imagem (obrigatório)
+  - title: título do post (opcional se for {{ page.title }})
+  - date: data do post (pode ser {{ page.date }})
+  - author: autor do post (ex: Richardson Almeida)
+{% endcomment %}
+
+<div class="diary-layout">
+  <div class="diary-postit">
+    <img class="diary-img" src="{{ include.image | relative_url }}" alt="Ilustração do diário">
+  </div>
+  <div class="diary-meta">
+    <h1 class="diary-title">{{ include.title | default: page.title }}</h1>
+    <p class="diary-date">
+      {{ include.date | default: page.date | date: "%d de %B de %Y" }}
+      {% if include.author or page.author %} • {{ include.author | default: page.author }}{% endif %}
+    </p>
+  </div>
+</div>

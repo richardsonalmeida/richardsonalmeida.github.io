@@ -1,20 +1,32 @@
+/* ===============================
+   Bloco CTA (Chamada para Ação)
+   Cartilha de Introdução à Programação
+=============================== */
+
 .cta-cartilha {
-  margin: 2rem 0;
+  margin: 2.5rem 0;
   text-align: center;
 }
 
+/* Botão estilizado da Hotmart */
 .botao-hotmart {
-  background-color: #32CD32; /* Verde Hotmart */
-  color: white;
-  padding: 12px 20px;
-  font-size: 1rem;
-  text-decoration: none;
-  border-radius: 8px;
+  background-color: #32CD32;      /* Verde vibrante padrão Hotmart */
+  color: #fff;                    /* Texto branco */
+  padding: 12px 24px;
+  font-size: 1.05rem;
   font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
   display: inline-block;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
+/* Efeito hover suave */
 .botao-hotmart:hover {
   background-color: #2eaa2e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }

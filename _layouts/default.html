@@ -8,38 +8,34 @@
   <!-- Favicon -->
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon" />
 
-  <!-- Estilo base do tema (Minima ou seu CSS) -->
-  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/custom.css' | relative_url }}">
+  <!-- Tema principal (inicial) -->
+  <link rel="stylesheet" href="{{ '/assets/style-diario.css' | relative_url }}">
 
-  
-  <!--<link rel="stylesheet" href="{{ '/assets/style-tech.css' | relative_url }}">-->
   {% include analytics.html %}
 </head>
 
-
-
-  
-</head>
 <body>
-    <div style="text-align: right; padding: 1rem;">
-  <button onclick="trocarTema()" style="
-  position: fixed;
-  top: 12px;
-  right: 12px;
-  background: #fff;
-  border: 1px solid #ccc;
-  padding: 6px 12px;
-  font-size: 0.9rem;
-  border-radius: 4px;
-  cursor: pointer;
-  color: #333;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-">🎨 Tema</button>
 
-</div>
+  <!-- Botão flutuante de troca de tema -->
+  <div style="text-align: right; padding: 1rem;">
+    <button onclick="trocarTema()" style="
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 6px 12px;
+      font-size: 0.9rem;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #333;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+      🎨 Tema
+    </button>
+  </div>
 
+  <!-- Cabeçalho -->
   <header style="text-align: center; padding: 2rem 0;">
     <h1 style="font-family: 'Fira Code', monospace; font-size: 2.5rem; margin-bottom: 0.5rem;">
       Diário de Bordo
@@ -49,57 +45,55 @@
     </p>
   </header>
 
- <nav style="text-align: center; margin-bottom: 2rem;">
-  <a href="{{ '/' | relative_url }}" style="margin: 0 10px;">Início</a>
-  <a href="{{ '/sobre/' | relative_url }}" style="margin: 0 10px;">Sobre</a>
-  <a href="{{ '/artigos/' | relative_url }}" style="margin: 0 10px;">Artigos</a>
-  <a href="{{ '/produtos/' | relative_url }}" style="margin: 0 10px;">Produtos</a>
-</nav>
+  <!-- Navegação -->
+  <nav style="text-align: center; margin-bottom: 2rem;">
+    <a href="{{ '/' | relative_url }}" style="margin: 0 10px;">Início</a>
+    <a href="{{ '/sobre/' | relative_url }}" style="margin: 0 10px;">Sobre</a>
+    <a href="{{ '/artigos/' | relative_url }}" style="margin: 0 10px;">Artigos</a>
+    <a href="{{ '/produtos/' | relative_url }}" style="margin: 0 10px;">Produtos</a>
+  </nav>
 
-
+  <!-- Conteúdo principal -->
   <main style="max-width: 800px; margin: 0 auto; padding: 0 1rem; text-align: justify;">
     {{ content }}
   </main>
 
+  <!-- Rodapé -->
   <footer style="text-align: center; margin-top: 3rem; padding: 2rem 0; color: #888; font-size: 0.9rem;">
     © {{ site.time | date: '%Y' }} Blog of Richardson. Todos os direitos reservados.
 
     <div style="margin-top: 1rem;">
-  <a href="mailto:{{ site.email }}" target="_blank">📧 E-mail</a> |
-  <a href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a> |
-  <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">LinkedIn</a> |
-  <a href="https://www.instagram.com/{{ site.instagram_br }}/" target="_blank">Instagram BR</a>
-</div>
-
+      <a href="mailto:{{ site.email }}" target="_blank">📧 E-mail</a> |
+      <a href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">LinkedIn</a> |
+      <a href="https://www.instagram.com/{{ site.instagram_br }}/" target="_blank">Instagram BR</a>
+    </div>
   </footer>
 
+  <!-- Troca de temas com rotação -->
   <script>
-  const temas = [
-    '/assets/style-classico.css',
-    '/assets/style-escuro.css',
-    '/assets/style-tech.css',
-    '/assets/style-neoclassico.css',
-    '/assets/style-editorial.css',
-    '/assets/style-minimal-borders.css',
-    '/assets/style-vaporwave.css',
-    '/assets/style-card.css',
-    '/assets/style-animated.css',
-    '/assets/custom.css'
-  ];
-  
-  let atual = 0;
+    const temas = [
+      '{{ "/assets/style-diario.css" | relative_url }}',
+      '{{ "/assets/style-classico.css" | relative_url }}',
+      '{{ "/assets/style-escuro.css" | relative_url }}',
+      '{{ "/assets/style-tech.css" | relative_url }}',
+      '{{ "/assets/style-editorial.css" | relative_url }}',
+      '{{ "/assets/style-vaporwave.css" | relative_url }}',
+      '{{ "/assets/style-card.css" | relative_url }}',
+      '{{ "/assets/style-animated.css" | relative_url }}',
+       ];
 
-  function trocarTema() {
-    atual = (atual + 1) % temas.length;
-    const link = document.querySelector('link[rel="stylesheet"]');
-    link.href = temas[atual];
-    console.log('Tema trocado para:', temas[atual]);
-  }
-</script>
-{% include politica-privacidade.html %}
+    let atual = 0;
 
+    function trocarTema() {
+      atual = (atual + 1) % temas.length;
+      const link = document.querySelector('link[rel="stylesheet"]');
+      link.href = temas[atual];
+      console.log('Tema trocado para:', temas[atual]);
+    }
+  </script>
+
+  {% include politica-privacidade.html %}
 
 </body>
-
-
 </html>

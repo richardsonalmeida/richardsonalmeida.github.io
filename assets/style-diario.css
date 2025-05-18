@@ -1,76 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 
 :root {
   --postit-color: #fff8b0;
   --pin-color: red;
-  --background-color: #fdfefe;
+  --background-color: #fdf6e3;
 }
 
+/* Corpo com fundo de caderno */
 body {
-  font-family: 'Ubuntu', sans-serif;
   background-color: var(--background-color);
-  color: #2e2e2e;
-  max-width: 840px;
-  margin: 0 auto;
-  padding: 2.5rem;
-  line-height: 1.75;
-  animation: fadein 1s ease-in;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 255, 0.08) 1px, transparent 1px);
+  background-size: 100% 2rem;
+  font-family: 'Homemade Apple', cursive;
+  color: #333;
+  padding: 2rem;
+  line-height: 1.8;
 }
 
-@keyframes fadein {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* Container do conteúdo */
+.diary-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
 }
 
-h1, h2 {
-  color: #0c2461;
-  position: relative;
-}
-
-a {
-  color: #60a3bc;
-  text-decoration: none;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  color: #3c6382;
-  text-decoration: underline;
-}
-
-nav {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-nav a {
-  margin: 0 10px;
-  font-weight: bold;
-  color: #2d3436;
-}
-
-footer {
-  margin-top: 4rem;
-  text-align: center;
-  font-size: 0.85rem;
-  color: #999;
-}
-
-/* ============================================
-   Diário: imagem com post-it + título ao lado
-============================================ */
-
+/* Cabeçalho: imagem + título lado a lado */
 .diary-layout {
   display: flex;
   align-items: center;
   gap: 1.5rem;
   flex-wrap: wrap;
-  justify-content: flex-start;
   margin-bottom: 2rem;
 }
 
+/* Post-it amarelo */
 .diary-postit {
   position: relative;
   width: 160px;
@@ -82,6 +48,7 @@ footer {
   text-align: center;
 }
 
+/* Pin vermelho */
 .diary-postit::before {
   content: "";
   position: absolute;
@@ -97,6 +64,7 @@ footer {
   border: 2px solid var(--background-color);
 }
 
+/* Imagem simulando desenho */
 .diary-img {
   max-width: 100%;
   height: auto;
@@ -107,6 +75,7 @@ footer {
   background: none;
 }
 
+/* Área do título e autor à direita */
 .diary-meta {
   flex: 1;
   min-width: 200px;
@@ -115,12 +84,17 @@ footer {
 .diary-title {
   font-size: 1.8rem;
   margin: 0 0 0.25rem 0;
-  font-weight: bold;
 }
 
 .diary-date {
   font-size: 0.9rem;
-  color: #666;
+  color: #555;
   margin: 0;
-  font-style: italic;
+}
+
+/* Conteúdo do post */
+.diary-content {
+  font-size: 1.1rem;
+  white-space: pre-line;
+  text-align: justify;
 }

@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+:root {
+  --postit-color: #fff8b0;
+  --pin-color: red;
+  --background-color: #121212;
+}
+
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #121212;
+  background-color: var(--background-color);
   color: #e0e0e0;
   max-width: 750px;
   margin: 0 auto;
@@ -30,4 +39,72 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   color: #777;
+}
+
+/* =======================================
+   Bloco de Diário com Post-it Ilustrado
+======================================= */
+
+.diary-layout {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.diary-postit {
+  position: relative;
+  width: 160px;
+  background-color: var(--postit-color);
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 8px rgba(255,255,255,0.1);
+  text-align: center;
+}
+
+.diary-postit::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: var(--pin-color);
+  border-radius: 50%;
+  border: 2px solid var(--background-color);
+  box-shadow: 0 0 2px rgba(255,255,255,0.3);
+  z-index: 2;
+}
+
+.diary-img {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(80%) contrast(1.2);
+  opacity: 0.95;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.diary-meta {
+  flex: 1;
+  min-width: 220px;
+}
+
+.diary-title {
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.diary-date {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin: 0;
+  font-style: italic;
 }

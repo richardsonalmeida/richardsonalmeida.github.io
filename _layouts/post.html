@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<article class="diary-page">
+
+  <div class="diary-layout">
+    <div class="diary-postit">
+      <img src="{{ page.image | relative_url }}" alt="Ilustração do diário" class="diary-img">
+    </div>
+    <div class="diary-meta">
+      <h1 class="diary-title">{{ page.title }}</h1>
+      <p class="diary-date">{{ page.date | date: "%d de %B de %Y" }} • {{ page.author }}</p>
+    </div>
+  </div>
+
+  <div class="diary-content">
+    {{ content }}
+  </div>
+
+</article>

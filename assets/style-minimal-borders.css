@@ -1,37 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+/* ========================
+   Variáveis do Tema Diário
+======================== */
+:root {
+  --font-main: 'Nunito', sans-serif;
+  --font-decorative: 'Homemade Apple', cursive;
+
+  --background: #fcfcfc;
+  --text-color: #2c2c2c;
+  --heading-color: #2c3e50;
+  --link-color: #2980b9;
+  --border-color: #e0e0e0;
+  --accent-color: #3498db;
+  --footer-color: #888;
+
+  --postit-color: #fff8b0;
+  --pin-color: red;
+  --pin-border-color: #fcfcfc;
+}
+
+/* ========================
+   Estilo Base do Tema
+======================== */
 body {
-  font-family: 'Nunito', sans-serif;
-  background-color: #fcfcfc;
-  color: #2c2c2c;
+  font-family: var(--font-main);
+  background-color: var(--background);
+  color: var(--text-color);
   max-width: 860px;
   margin: 0 auto;
   padding: 2rem;
   line-height: 1.8;
-  border-left: 5px solid #3498db;
+  border-left: 5px solid var(--accent-color);
 }
 
 h1, h2 {
-  color: #2c3e50;
-  border-bottom: 2px solid #e0e0e0;
+  color: var(--heading-color);
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 0.3rem;
 }
 
 a {
-  color: #2980b9;
+  color: var(--link-color);
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
 
 nav {
-  border-top: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   padding: 0.5rem 0;
   margin-bottom: 2rem;
   text-align: center;
 }
-
 nav a {
   margin: 0 12px;
   color: #555;
@@ -39,10 +63,83 @@ nav a {
 }
 
 footer {
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--border-color);
   margin-top: 3rem;
   padding-top: 1rem;
   font-size: 0.9rem;
   text-align: center;
-  color: #888;
+  color: var(--footer-color);
+}
+
+/* ===============================
+   Diário: Post-it + Imagem + Meta
+=============================== */
+.diary-header-flex {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+/* Estilo do post-it amarelo */
+.postit-wrapper {
+  position: relative;
+  width: 160px;
+  background: var(--postit-color);
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+/* Pin vermelho no topo central */
+.postit-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: var(--pin-color);
+  border-radius: 50%;
+  border: 2px solid var(--pin-border-color);
+  box-shadow: 0 0 2px rgba(0,0,0,0.4);
+  z-index: 2;
+}
+
+/* Imagem com efeito de lápis */
+img.diary-postit-img {
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(80%) contrast(1.2);
+  opacity: 0.95;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/* Metadados ao lado da imagem */
+.diary-meta {
+  flex: 1;
+  min-width: 220px;
+}
+
+.diary-title {
+  font-size: 1.7rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.diary-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  font-style: italic;
 }

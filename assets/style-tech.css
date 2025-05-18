@@ -1,34 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+:root {
+  --postit-color: #fff8b0;
+  --pin-color: red;
+  --background-color: #f7f9fb;
+}
+
+/* =============================
+   ESTILO BASE DO TEMA PRINCIPAL
+============================= */
+
 body {
-  font-family: 'Fira Code', monospace;
-  background-color: #0f111a;
-  color: #cfd8dc;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: var(--background-color);
+  color: #222;
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  line-height: 1.6;
+  line-height: 1.75;
 }
 
 h1, h2 {
-  color: #00e676;
+  color: #003366;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
 }
 
 a {
-  color: #64b5f6;
-  text-decoration: none;
+  color: #006699;
+  font-weight: 500;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
+nav {
+  margin: 1rem 0 2rem;
+  text-align: center;
+}
+
 nav a {
   margin: 0 10px;
-  color: #90caf9;
+  color: #333;
+  font-weight: bold;
 }
 
 footer {
   margin-top: 3rem;
-  text-align: center;
   font-size: 0.85rem;
-  color: #90a4ae;
+  text-align: center;
+  color: #666;
+}
+
+/* ================================
+   BLOCO DO DIÁRIO COM POST-IT FIXADO
+================================ */
+
+.diary-layout {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.diary-postit {
+  position: relative;
+  width: 160px;
+  background-color: var(--postit-color);
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.diary-postit::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: var(--pin-color);
+  border-radius: 50%;
+  border: 2px solid var(--background-color);
+  box-shadow: 0 0 2px rgba(0,0,0,0.4);
+  z-index: 2;
+}
+
+.diary-img {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(80%) contrast(1.2);
+  opacity: 0.95;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.diary-meta {
+  flex: 1;
+  min-width: 220px;
+}
+
+.diary-title {
+  font-size: 1.7rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: bold;
+  color: #003366;
+}
+
+.diary-date {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  font-style: italic;
 }

@@ -1,0 +1,39 @@
+/* ============================
+   Botão com imagem de digital
+============================ */
+
+.cta-cartilha {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.botao-digital {
+  display: inline-block;
+  text-align: center;
+}
+
+.botao-digital-img {
+  width: 100%; /* Reduzido para 1/4 da largura do container */
+  max-width: 180px; /* Limite máximo para manter proporcionalidade */
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  border: none;
+}
+
+.botao-digital-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.botao-digital-label {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #222;
+}

@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+:root {
+  --postit-color: #fff8b0;
+  --pin-color: red;
+  --background-color: #f4f6f8;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f4f6f8;
+  background-color: var(--background-color);
   color: #222;
   max-width: 700px;
   margin: 0 auto;
@@ -46,4 +55,72 @@ footer {
   margin-top: 3rem;
   font-size: 0.9rem;
   color: #aaa;
+}
+
+/* ================================
+   Bloco de Diário com Ilustração
+================================ */
+
+.diary-layout {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.diary-postit {
+  position: relative;
+  width: 160px;
+  background-color: var(--postit-color);
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.diary-postit::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: var(--pin-color);
+  border-radius: 50%;
+  border: 2px solid var(--background-color);
+  box-shadow: 0 0 2px rgba(0,0,0,0.4);
+  z-index: 2;
+}
+
+.diary-img {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(80%) contrast(1.2);
+  opacity: 0.95;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.diary-meta {
+  flex: 1;
+  min-width: 220px;
+}
+
+.diary-title {
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  color: #0a3d62;
+}
+
+.diary-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  font-style: italic;
 }
