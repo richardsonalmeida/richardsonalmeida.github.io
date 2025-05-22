@@ -30,3 +30,40 @@
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
+/* Responsividade: ajustes em telas menores */
+@media screen and (max-width: 768px) {
+  .cta-cartilha {
+    padding: 1rem;
+  }
+
+  .botao-hotmart {
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+    padding: 14px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .diary-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .diary-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .diary-content {
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}

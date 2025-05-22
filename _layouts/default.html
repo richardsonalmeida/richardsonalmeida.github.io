@@ -9,7 +9,15 @@
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon" />
 
   <!-- Tema principal (inicial) -->
-  <link rel="stylesheet" href="{{ '/assets/style-diario.css' | relative_url }}">
+  <!-- Sugestão: adicionar id para facilitar troca segura de tema -->
+  <link id="tema-estilo" rel="stylesheet" href="{{ '/assets/style-diario.css' | relative_url }}">
+
+  <!-- Manifesto para PWA -->
+  <link rel="manifest" href="{{ '/assets/manifest.json' | relative_url }}">
+
+  <!-- Ícone para atalhos mobile -->
+  <link rel="apple-touch-icon" href="{{ '/assets/images/imagem-botao-comprar.png' | relative_url }}">
+  <meta name="theme-color" content="#32CD32">
 
   {% include analytics.html %}
 </head>
@@ -18,7 +26,7 @@
 
   <!-- Botão flutuante de troca de tema -->
   <div style="text-align: right; padding: 1rem;">
-    <button onclick="trocarTema()" style="
+    <button onclick="trocarTema()" aria-label="Trocar tema visual" style="
       position: fixed;
       top: 12px;
       right: 12px;
@@ -81,13 +89,13 @@
       '{{ "/assets/style-vaporwave.css" | relative_url }}',
       '{{ "/assets/style-card.css" | relative_url }}',
       '{{ "/assets/style-animated.css" | relative_url }}',
-       ];
+    ];
 
     let atual = 0;
 
     function trocarTema() {
       atual = (atual + 1) % temas.length;
-      const link = document.querySelector('link[rel="stylesheet"]');
+      const link = document.getElementById("tema-estilo");
       link.href = temas[atual];
       console.log('Tema trocado para:', temas[atual]);
     }
