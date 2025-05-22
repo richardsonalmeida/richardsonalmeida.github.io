@@ -108,3 +108,36 @@ footer {
   margin: 0;
   font-style: italic;
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .diary-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .diary-meta {
+    width: 100%;
+    min-width: unset;
+    margin-top: 1rem;
+  }
+
+  .diary-title {
+    font-size: 1.4rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  .diary-postit {
+    width: 100%;
+    max-width: 280px;
+  }
+}

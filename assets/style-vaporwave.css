@@ -118,3 +118,31 @@ footer {
   margin: 0;
   font-style: italic;
 }
+
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .diary-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .diary-meta {
+    min-width: unset;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .diary-title {
+    font-size: 1.4rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
