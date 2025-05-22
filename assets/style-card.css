@@ -124,3 +124,38 @@ footer {
   margin: 0;
   font-style: italic;
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .diary-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .diary-meta {
+    min-width: unset;
+    width: 100%;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .diary-postit {
+    width: 100%;
+    max-width: 240px;
+  }
+}

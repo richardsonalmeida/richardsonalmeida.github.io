@@ -30,6 +30,10 @@ Pensar com clareza. Agir com método. Construir com propósito.
 
 Se você deseja começar essa jornada com o pé direito, recomendo fortemente que baixe a **Cartilha de Introdução à Programação**, preparada com muito cuidado para iniciantes.
 
+Se preferir, você pode ir direto ao botão abaixo para acessar a cartilha.
+
+Mas se quiser conhecer o que ela oferece, [clique aqui e leia mais sobre a Cartilha de Programação]({{ '/educação/tecnologia/programação/aprendizado/2025/05/22/como-a-cartilha-pode-te-ajudar.html' | relative_url }})
+
 
 {% include hotmart-botao-cartilha.html %}
 
