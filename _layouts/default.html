@@ -79,27 +79,38 @@
   </footer>
 
   <!-- Troca de temas com rotação -->
-  <script>
-    const temas = [
-      '{{ "/assets/style-diario.css" | relative_url }}',
-      '{{ "/assets/style-classico.css" | relative_url }}',
-      '{{ "/assets/style-escuro.css" | relative_url }}',
-      '{{ "/assets/style-tech.css" | relative_url }}',
-      '{{ "/assets/style-editorial.css" | relative_url }}',
-      '{{ "/assets/style-vaporwave.css" | relative_url }}',
-      '{{ "/assets/style-card.css" | relative_url }}',
-      '{{ "/assets/style-animated.css" | relative_url }}',
-    ];
+<script>
+  const temas = [
+    '{{ "/assets/style-diario.css" | relative_url }}',
+    '{{ "/assets/style-classico.css" | relative_url }}',
+    '{{ "/assets/style-escuro.css" | relative_url }}',
+    '{{ "/assets/style-tech.css" | relative_url }}',
+    '{{ "/assets/style-editorial.css" | relative_url }}',
+    '{{ "/assets/style-vaporwave.css" | relative_url }}',
+    '{{ "/assets/style-card.css" | relative_url }}',
+    '{{ "/assets/style-animated.css" | relative_url }}',
+  ];
 
-    let atual = 0;
+  // Recupera o tema salvo ou começa com o 0
+  let atual = localStorage.getItem("temaAtual");
+  atual = atual ? parseInt(atual) : 0;
 
-    function trocarTema() {
-      atual = (atual + 1) % temas.length;
-      const link = document.getElementById("tema-estilo");
-      link.href = temas[atual];
-      console.log('Tema trocado para:', temas[atual]);
-    }
-  </script>
+  // Aplica o tema ao carregar a página
+  window.addEventListener("DOMContentLoaded", () => {
+    const link = document.getElementById("tema-estilo");
+    link.href = temas[atual];
+  });
+
+  // Função para trocar o tema e salvar no localStorage
+  function trocarTema() {
+    atual = (atual + 1) % temas.length;
+    const link = document.getElementById("tema-estilo");
+    link.href = temas[atual];
+    localStorage.setItem("temaAtual", atual);
+    console.log("Tema trocado para:", temas[atual]);
+  }
+</script>
+
 
   {% include politica-privacidade.html %}
 
