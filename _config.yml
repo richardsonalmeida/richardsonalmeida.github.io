@@ -21,14 +21,18 @@
 title: Diário de Bordo
 email: almeidaarichardson@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
- Olá! Sou Richardson, e transformo minha vivência em TI e serviço público em conteúdos acessíveis sobre tecnologia, automação e produtividade. Se você busca clareza para aprender, ensinar ou inovar com propósito, este espaço é seu também."
+  "Olá! Sou Richardson, e transformo minha vivência em Tecnologia da Informação — junto a outras experiências — em conteúdos acessíveis, que acredito serem úteis a quem se interessa por tecnologia, educação e cultura. Sinta-se à vontade para explorar este espaço."
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://richardsonalmeida.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
-github_username: richardsonalmeida
+url: "https://richardsonalmeida.com.br" # the base hostname & protocol for your site
+
+github_username: richardson7Ago
 linkedin_username: richardson-almeida-78ab2b34
-instagram_br: conceptosclaros_br
+
+# Redes sociais não utilizadas (removidas ou comentadas)
+# twitter_username: jekyllrb
+# instagram_br: conceptosclaros_br
+
 
 
 

@@ -49,7 +49,7 @@
       Diário de Bordo
     </h1>
     <p style="font-size: 1rem; color: #444; max-width: 700px; margin: 0 auto;">
-      Olá! Sou Richardson, e transformo minha vivência em TI e serviço público em conteúdos acessíveis sobre tecnologia, automação e produtividade. Se você busca clareza para aprender, ensinar ou inovar com propósito, este espaço também é seu.
+      Olá! Sou Richardson, e transformo minha vivência em Tecnologia da Informação — junto a outras experiências — em conteúdos acessíveis, que acredito serem úteis a quem se interessa por tecnologia, educação e cultura. Sinta-se à vontade para explorar este espaço.
     </p>
   </header>
 
@@ -66,17 +66,20 @@
     {{ content }}
   </main>
 
-  <!-- Rodapé -->
-  <footer style="text-align: center; margin-top: 3rem; padding: 2rem 0; color: #888; font-size: 0.9rem;">
-    © {{ site.time | date: '%Y' }} Blog of Richardson. Todos os direitos reservados.
+  
+ <!-- Rodapé -->
+<footer style="text-align: center; margin-top: 3rem; padding: 2rem 0; color: #888; font-size: 0.9rem;">
+  © {{ site.time | date: '%Y' }} Blog of Richardson. Todos os direitos reservados.
 
-    <div style="margin-top: 1rem;">
-      <a href="mailto:{{ site.email }}" target="_blank">📧 E-mail</a> |
-      <a href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">LinkedIn</a> |
-      <a href="https://www.instagram.com/{{ site.instagram_br }}/" target="_blank">Instagram BR</a>
-    </div>
-  </footer>
+  <div style="margin-top: 1rem;">
+    <a href="mailto:{{ site.email }}" target="_blank">📧 E-mail</a> |
+    <a href="https://github.com/richardson7Ago" target="_blank">GitHub</a> |
+    <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">LinkedIn</a> |
+    <a href="https://richardsonalmeida.com.br" target="_blank">Site</a>
+
+  </div>
+</footer>
+
 
   <!-- Troca de temas com rotação -->
 <script>
@@ -113,6 +116,17 @@
 
 
   {% include politica-privacidade.html %}
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const elementos = document.querySelectorAll("p");
+    elementos.forEach(el => {
+      if (el.textContent?.toLowerCase().includes("subscribe via rss")) {
+        el.style.display = "none";
+      }
+    });
+  });
+</script>
+
 
 </body>
 </html>

@@ -1,0 +1,18 @@
+#curtida-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#curtida-container button {
+  padding: 8px 16px;
+  border: none;
+  background: #ffcc00;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#curtidas {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
