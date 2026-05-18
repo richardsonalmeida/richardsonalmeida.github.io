@@ -1,0 +1,14 @@
+{
+    "title": "Project Title",
+
+    "description": "Short operational and engineering-oriented description explaining the purpose of the laboratory, experiment or applied system.",
+
+    "stack": [
+        "Python",
+        "Flask",
+        "PostgreSQL",
+        "Docker"
+    ],
+
+    "repository": "https://github.com/igniaction/project-repository"
+}

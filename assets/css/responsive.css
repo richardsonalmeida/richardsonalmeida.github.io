@@ -1,0 +1,134 @@
+@media (max-width: 1200px) {
+
+    h1 {
+
+        font-size: 4rem;
+    }
+
+    h2 {
+
+        font-size: 2.5rem;
+    }
+
+    .origins-layout {
+
+        gap: 50px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .slide {
+
+        padding: 50px;
+    }
+
+    h1 {
+
+        font-size: 3rem;
+    }
+
+    h2 {
+
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+
+        font-size: 1.1rem;
+    }
+
+    .hero-description {
+
+        font-size: 1rem;
+    }
+
+    .origins-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .cards-grid,
+    #labs-container {
+
+        grid-template-columns: 1fr;
+    }
+
+    .navigation {
+
+        right: 20px;
+
+        bottom: 20px;
+    }
+
+    .navigation button {
+
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .slide {
+
+        padding: 35px;
+    }
+
+    h1 {
+
+        font-size: 2.3rem;
+    }
+
+    h2 {
+
+        font-size: 1.7rem;
+
+        margin-bottom: 30px;
+    }
+
+    .hero-subtitle {
+
+        font-size: 1rem;
+
+        line-height: 1.8;
+    }
+
+    .hero-description,
+    .origins-right p,
+    .info-card p,
+    .lab-card p {
+
+        font-size: 0.95rem;
+
+        line-height: 1.8;
+    }
+
+    .hero-links {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .hero-links a {
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .info-card,
+    .lab-card {
+
+        padding: 25px;
+    }
+
+}

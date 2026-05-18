@@ -1,0 +1,21 @@
+{
+    "title": "Operational Identity Core",
+
+    "description": "Framework-agnostic operational foundation designed for identity resolution, organizational role aggregation, capability orchestration and runtime permission propagation across distributed systems and institutional environments.",
+
+    "stack": [
+        "Python",
+        "PostgreSQL",
+        "SQLAlchemy",
+        "Alembic",
+        "Pydantic",
+        "Docker",
+        "Clean Architecture",
+        "DDD",
+        "Repository Pattern",
+        "Operational Visibility",
+        "Runtime Observability"
+    ],
+
+    "repository": "https://github.com/igniaction/operational-identity-core"
+}
