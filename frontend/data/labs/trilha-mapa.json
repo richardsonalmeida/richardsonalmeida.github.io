@@ -1,0 +1,192 @@
+{
+    
+
+    "id":
+        "trilha-mapa",
+
+    "title":
+        "Trilha MAPA",
+
+    "headline":
+        "Engineering Workflow Visualization Platform",
+
+ 
+
+    "ptBr":
+        "Plataforma Flask para visualização e organização de fluxos operacionais, fases de desenvolvimento, critérios técnicos e rastreabilidade de sistemas.",
+
+    "en":
+        "Flask platform for operational workflow visualization, engineering phase organization, technical criteria mapping and systems traceability.",
+
+  
+
+    "category":
+        "operational-platform",
+
+    "domain":
+        "workflow-engineering",
+
+    "architecture":
+        "modular-operational-platform",
+
+ 
+    "capabilityStatus": {
+
+        "maturity":
+            "active-platform",
+
+        "stability":
+            "operational",
+
+        "architectureReadiness":
+            "high",
+
+        "documentationCoverage":
+            "moderate"
+
+    },
+
+
+
+    "architecturePrinciples": [
+
+        "Modular Design",
+        "Operational Visibility",
+        "Workflow Traceability",
+        "Scalable Organization",
+        "Maintainability"
+
+    ],
+
+  
+
+    "engineeringCoverage": [
+
+        "Workflow Visualization",
+        "Lifecycle Mapping",
+        "Operational Navigation",
+        "Engineering Traceability",
+        "Tagging Systems",
+        "Organizational Flows"
+
+    ],
+
+ 
+
+    "architectureCoverage": [
+
+        "Flask Architecture",
+        "Operational UX",
+        "Workflow Rendering",
+        "Lifecycle Navigation",
+        "System Categorization"
+
+    ],
+
+ 
+
+    "repositoryStructure": [
+
+        "app.py",
+        "templates/",
+        "static/",
+        "requirements.txt"
+
+    ],
+
+   
+
+    "stack": {
+
+        "language": [
+
+            "Python"
+
+        ],
+
+        "framework": [
+
+            "Flask"
+
+        ],
+
+        "frontend": [
+
+            "HTML",
+            "CSS",
+            "JavaScript"
+
+        ],
+
+        "deployment": [
+
+            "PythonAnywhere"
+
+        ]
+
+    },
+
+  
+
+    "qualityEngineering": [
+
+        "Operational Navigation",
+        "Responsive Rendering",
+        "Workflow Organization"
+
+    ],
+
+   
+
+    "platformAccess": {
+
+        "livePlatform":
+            "https://igniaction.pythonanywhere.com/",
+
+        "repository":
+            "https://github.com/igniaction"
+
+    },
+
+
+
+    "featured":
+        true,
+
+    "exploratory":
+        true,
+
+    "onboarding":
+        true,
+
+    "runtimePriority":
+        "high",
+
+    "revealPriority":
+        2,
+
+    "visualWeight":
+        "high",
+
+    "cognitiveDensity":
+        "moderate",
+
+
+
+    "runtimeSupport": {
+
+        "mobileOptimized":
+            true,
+
+        "reducedMotionSupport":
+            true,
+
+        "lazyHydration":
+            true,
+
+        "progressiveReveal":
+            true
+
+    }
+
+}

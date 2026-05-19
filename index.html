@@ -7,68 +7,238 @@
 
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0"
+        content="
+            width=device-width,
+            initial-scale=1.0,
+            viewport-fit=cover
+        "
     >
 
     <title>
-        Richardson Almeida | Operational Engineering
+        Richardson Almeida | Software Engineer
     </title>
 
+    <meta
+        name="description"
+        content="
+            Software engineer focused on backend architecture,
+            distributed systems, frontend platform engineering
+            and maintainable software systems.
+        "
+    >
+
+    <!--
+    |--------------------------------------------------------------------------
+    | Frontend Themes
+    |--------------------------------------------------------------------------
+    -->
+
     <link
         rel="stylesheet"
-        href="assets/css/style.css"
+        href="frontend/themes/operational/base.css"
     >
 
     <link
         rel="stylesheet"
-        href="assets/css/operational-theme.css"
+        href="frontend/themes/operational/theme.css"
     >
 
     <link
         rel="stylesheet"
-        href="assets/css/responsive.css"
+        href="frontend/themes/responsive/responsive.css"
     >
 
 </head>
 
-<body>
+<body
+    data-runtime-mode="operational"
+    data-runtime-density="comfortable"
+>
 
-    <main class="slider-container">
+    <!--
+    |--------------------------------------------------------------------------
+    | Accessibility
+    |--------------------------------------------------------------------------
+    -->
 
-        <!-- SLIDE 1 -->
+    <a
+        href="#runtime-slider"
+        class="skip-navigation"
+    >
+        Skip navigation
+    </a>
 
-        <section class="slide hero-slide">
+    <!--
+    |--------------------------------------------------------------------------
+    | Runtime Progress
+    |--------------------------------------------------------------------------
+    -->
 
-            <div class="slide-content">
+    <aside
+        class="operational-progress-rail"
+        aria-label="Navigation progress"
+    >
 
-                <span class="slide-tag">
-                    Operational Engineering
-                </span>
+        <span
+            class="operational-progress-dot active"
+            aria-hidden="true"
+        ></span>
 
-                <h1>
-                    Richardson Almeida
-                </h1>
+        <span
+            class="operational-progress-dot"
+            aria-hidden="true"
+        ></span>
 
-                <p class="hero-subtitle">
+        <span
+            class="operational-progress-dot"
+            aria-hidden="true"
+        ></span>
 
-                    Backend Systems • Operational Architecture • Institutional Integrations • Applied Engineering Laboratories
+        <span
+            class="operational-progress-dot"
+            aria-hidden="true"
+        ></span>
 
-                </p>
+        <span
+            class="operational-progress-dot"
+            aria-hidden="true"
+        ></span>
 
-                <p class="hero-description">
+        <span
+            class="operational-progress-dot"
+            aria-hidden="true"
+        ></span>
 
-                    Systems-oriented engineer working across backend platforms,
-                    operational workflows, institutional integrations and applied
-                    architecture laboratories focused on scalable and sustainable
-                    digital solutions.
+    </aside>
 
-                </p>
+    <!--
+    |--------------------------------------------------------------------------
+    | Section Indicator
+    |--------------------------------------------------------------------------
+    -->
 
-                <div class="hero-links">
+    <div
+        class="operational-section-indicator"
+        aria-live="polite"
+    >
+
+        Engineering Overview
+
+    </div>
+
+    <!--
+    |--------------------------------------------------------------------------
+    | Runtime Application
+    |--------------------------------------------------------------------------
+    -->
+
+    <main
+        class="
+            runtime-shell
+            slider-container
+        "
+        id="runtime-slider"
+        role="main"
+        aria-label="Engineering platform"
+        data-runtime-surface="viewport"
+    >
+
+        <!--
+        |--------------------------------------------------------------------------
+        | Slide 1 — Hero
+        |--------------------------------------------------------------------------
+        -->
+
+        <section
+            class="
+                slide
+                hero-slide
+                active-slide
+            "
+            id="slide-hero"
+            aria-hidden="false"
+            aria-labelledby="hero-title"
+            data-runtime-section="hero"
+            data-runtime-surface="immersive"
+        >
+
+            <div
+                class="
+                    slide-content
+                    runtime-stack
+                "
+            >
+
+                <header
+                    class="
+                        hero-header
+                        runtime-stack
+                    "
+                >
+
+                    <span class="slide-tag">
+                        Software Engineer
+                    </span>
+
+                    <h1 id="hero-title">
+                        Richardson Almeida
+                    </h1>
+
+                    <p class="hero-subtitle">
+
+                        Backend Architecture • Distributed Systems •
+                        Frontend Platform Engineering
+
+                    </p>
+
+                </header>
+
+                <div
+                    class="
+                        hero-description-group
+                        runtime-stack
+                        runtime-reading-flow
+                    "
+                >
+
+                    <p class="hero-description">
+
+                        Software engineer focused on backend systems,
+                        scalable frontend architecture, distributed
+                        integrations and maintainable engineering
+                        ecosystems.
+
+                    </p>
+
+                    <p class="hero-description">
+
+                        Building reusable engineering systems through
+                        modular architecture, platform thinking and
+                        structured software design.
+
+                    </p>
+
+                </div>
+
+                <div
+                    class="hero-scroll-hint"
+                    aria-hidden="true"
+                >
+
+                    Explore engineering systems
+
+                </div>
+
+                <nav
+                    class="hero-links"
+                    aria-label="External links"
+                >
 
                     <a
-                        href="https://github.com/igniaction/"
+                        href="https://github.com/igniaction"
                         target="_blank"
+                        rel="noopener noreferrer"
+                        class="hero-link"
                     >
                         GitHub
                     </a>
@@ -76,129 +246,186 @@
                     <a
                         href="https://www.linkedin.com/"
                         target="_blank"
+                        rel="noopener noreferrer"
+                        class="hero-link"
                     >
                         LinkedIn
                     </a>
 
-                </div>
+                </nav>
 
             </div>
 
         </section>
 
-        <!-- SLIDE 2 -->
+        <!--
+        |--------------------------------------------------------------------------
+        | Slide 2 — Engineering Origins
+        |--------------------------------------------------------------------------
+        -->
 
-        <section class="slide">
+        <section
+            class="slide"
+            id="slide-origins"
+            aria-hidden="true"
+            aria-labelledby="origins-title"
+            data-runtime-section="origins"
+            data-runtime-surface="narrative"
+        >
 
-            <div class="slide-content origins-layout">
+            <div
+                class="
+                    slide-content
+                    origins-layout
+                "
+            >
 
-                <div class="origins-left">
+                <aside
+                    class="
+                        origins-left
+                        runtime-stack
+                    "
+                >
 
                     <span class="slide-tag">
-                        Origins
+                        Engineering Origins
                     </span>
 
-                    <h2>
-                        Where Engineering Started
+                    <h2 id="origins-title">
+                        From Mathematics to Systems Engineering
                     </h2>
 
-                </div>
+                </aside>
 
-                <div class="origins-right">
+                <article
+                    class="
+                        origins-right
+                        runtime-stack
+                        runtime-reading-flow
+                    "
+                >
 
                     <p>
 
-                        My journey into engineering started through mathematics
-                        and curiosity about structures, models and practical applicability.
+                        My journey into technology started through
+                        mathematics and an interest in understanding
+                        structures, logic and complex systems.
 
                     </p>
 
                     <p>
 
-                        While studying mathematics, I discovered computational modeling
-                        through Excel-based calculations and became interested in how
-                        systems process information and generate outcomes.
+                        After discovering programming through Python,
+                        backend systems and web architecture, I became
+                        increasingly interested in how software systems
+                        organize, process and sustain operational flows.
 
                     </p>
 
                     <p>
 
-                        After being introduced to Python by a mathematics professor,
-                        I began studying programming independently through technical books,
-                        documentation and continuous experimentation.
+                        Over time, that curiosity evolved beyond code
+                        itself into a broader interest in distributed
+                        systems, integrations, workflows, maintainable
+                        architectures and engineering organization.
 
                     </p>
 
                     <p>
 
-                        Learning programming also unlocked my ability to read technical
-                        English documentation directly, gradually transforming both
-                        my communication and engineering learning process.
+                        Today, this platform documents that evolution
+                        through real engineering repositories,
+                        architecture-driven systems and continuous
+                        technical experimentation.
 
                     </p>
 
-                    <p>
-
-                        Over time, backend engineering evolved from curiosity into
-                        a continuous applied laboratory involving APIs, Flask ecosystems,
-                        databases, automation, operational workflows and systems architecture.
-
-                    </p>
-
-                </div>
+                </article>
 
             </div>
 
         </section>
 
-        <!-- SLIDE 3 -->
+        <!--
+        |--------------------------------------------------------------------------
+        | Slide 3 — Engineering Experience
+        |--------------------------------------------------------------------------
+        -->
 
-        <section class="slide">
+        <section
+            class="slide"
+            id="slide-institutional"
+            aria-hidden="true"
+            aria-labelledby="institutional-title"
+            data-runtime-section="experience"
+            data-runtime-surface="operational"
+        >
 
-            <div class="slide-content">
+            <div
+                class="
+                    slide-content
+                    runtime-stack
+                "
+            >
 
-                <span class="slide-tag">
-                    Institutional Systems
-                </span>
+                <header
+                    class="
+                        slide-header
+                        runtime-stack
+                    "
+                >
 
-                <h2>
-                    Public Digital Platforms & Operational Workflows
-                </h2>
+                    <span class="slide-tag">
+                        Engineering Experience
+                    </span>
 
-                <div class="cards-grid">
+                    <h2 id="institutional-title">
+                        Backend Systems & Operational Engineering
+                    </h2>
 
-                    <article class="info-card">
+                    <p class="section-introduction">
+
+                        Engineering participation involving backend
+                        systems, distributed integrations,
+                        institutional workflows and operational
+                        software ecosystems.
+
+                    </p>
+
+                </header>
+
+                <div
+                    class="
+                        cards-grid
+                        runtime-grid
+                    "
+                >
+
+                    <article
+                        class="info-card"
+                        data-surface="glass"
+                        data-elevation="2"
+                    >
 
                         <h3>
-                            Inspection & Regulatory Systems
+                            Backend Systems
                         </h3>
 
                         <p>
 
-                            Participation in initiatives involving operational inspection,
-                            regulatory workflows, traceability and digital modernization
-                            within distributed institutional environments.
+                            APIs, authentication systems,
+                            distributed services and maintainable
+                            backend architecture.
 
                         </p>
 
                     </article>
 
-                    <article class="info-card">
-
-                        <h3>
-                            Workflow Structuring
-                        </h3>
-
-                        <p>
-
-                            Organization of operational flows, maintenance visibility,
-                            incident coordination and institutional service management processes.
-
-                        </p>
-
-                    </article>
-
-                    <article class="info-card">
+                    <article
+                        class="info-card"
+                        data-surface="glass"
+                        data-elevation="2"
+                    >
 
                         <h3>
                             Systems Integration
@@ -206,14 +433,39 @@
 
                         <p>
 
-                            Experience involving APIs, authentication ecosystems,
-                            interoperability layers and distributed backend integrations.
+                            Interoperability initiatives,
+                            workflow coordination and technical
+                            integration environments.
 
                         </p>
 
                     </article>
 
-                    <article class="info-card">
+                    <article
+                        class="info-card"
+                        data-surface="glass"
+                        data-elevation="2"
+                    >
+
+                        <h3>
+                            Operational Engineering
+                        </h3>
+
+                        <p>
+
+                            Sustainment processes, operational
+                            visibility and engineering workflow
+                            organization.
+
+                        </p>
+
+                    </article>
+
+                    <article
+                        class="info-card"
+                        data-surface="glass"
+                        data-elevation="2"
+                    >
 
                         <h3>
                             Architecture & Delivery
@@ -221,9 +473,9 @@
 
                         <p>
 
-                            Collaboration across development, infrastructure,
-                            architecture and operational teams involving CI/CD
-                            and delivery workflows.
+                            CI/CD pipelines, infrastructure
+                            coordination and maintainable
+                            engineering delivery.
 
                         </p>
 
@@ -235,21 +487,288 @@
 
         </section>
 
-        <!-- SLIDE 4 -->
+        <!--
+        |--------------------------------------------------------------------------
+        | Slide 4 — Engineering Systems
+        |--------------------------------------------------------------------------
+        -->
 
-        <section class="slide">
+        <section
+            class="slide"
+            id="slide-labs"
+            aria-hidden="true"
+            aria-labelledby="labs-title"
+            data-runtime-section="systems"
+            data-runtime-surface="runtime"
+        >
 
-            <div class="slide-content">
+            <div
+                class="
+                    slide-content
+                    capability-layout
+                    runtime-stack
+                "
+            >
 
-                <span class="slide-tag">
-                    Engineering Labs
-                </span>
+                <aside
+                    class="
+                        capability-intro
+                        runtime-stack
+                    "
+                >
 
-                <h2>
-                    Continuous Applied Engineering Laboratories
-                </h2>
+                    <span class="slide-tag">
+                        Engineering Systems
+                    </span>
 
-                <div id="labs-container">
+                    <h2 id="labs-title">
+                        Repository-Driven Engineering Capabilities
+                    </h2>
+
+                    <p class="section-introduction">
+
+                        Real engineering repositories focused on
+                        backend architecture, frontend platforms,
+                        distributed integrations and maintainable
+                        software systems.
+
+                    </p>
+
+                    <div class="capability-highlights">
+
+                        <div class="capability-highlight">
+                            <span>
+                                Backend Architecture
+                            </span>
+                        </div>
+
+                        <div class="capability-highlight">
+                            <span>
+                                Distributed Systems
+                            </span>
+                        </div>
+
+                        <div class="capability-highlight">
+                            <span>
+                                Frontend Platforms
+                            </span>
+                        </div>
+
+                        <div class="capability-highlight">
+                            <span>
+                                Identity Systems
+                            </span>
+                        </div>
+
+                        <div class="capability-highlight">
+                            <span>
+                                Runtime Rendering
+                            </span>
+                        </div>
+
+                        <div class="capability-highlight">
+                            <span>
+                                Engineering Documentation
+                            </span>
+                        </div>
+
+                    </div>
+
+                </aside>
+
+                <section class="capability-runtime-stage">
+
+                    <header
+                        class="
+                            capability-runtime-header
+                            runtime-stack
+                        "
+                    >
+
+                        <div class="runtime-stack">
+
+                            <span class="capability-runtime-tag">
+
+                                Real Engineering Repositories
+
+                            </span>
+
+                            <h3>
+                                Architecture Capabilities
+                            </h3>
+
+                        </div>
+
+                        <p>
+
+                            Structured engineering repositories with
+                            documentation, architecture diagrams,
+                            backend systems, testing pipelines and
+                            maintainable software organization.
+
+                        </p>
+
+                    </header>
+
+                    <section
+                        id="labs-container"
+                        class="
+                            labs-runtime-grid
+                            labs-grid
+                            runtime-grid
+                        "
+                        aria-live="polite"
+                        aria-label="Engineering capabilities"
+                    >
+
+                        <article
+                            class="
+                                lab-card
+                                lab-card--placeholder
+                            "
+                            data-surface="glass"
+                            data-elevation="2"
+                        >
+
+                            <header
+                                class="
+                                    lab-header
+                                    runtime-stack
+                                "
+                            >
+
+                                <span class="lab-headline">
+
+                                    Engineering Capability
+
+                                </span>
+
+                                <h3>
+                                    Synchronizing Engineering Repositories
+                                </h3>
+
+                            </header>
+
+                            <p>
+
+                                Loading repository metadata,
+                                architecture coverage and
+                                engineering systems.
+
+                            </p>
+
+                        </article>
+
+                    </section>
+
+                </section>
+
+            </div>
+
+        </section>
+
+        <!--
+        |--------------------------------------------------------------------------
+        | Slide 5 — Engineering Focus
+        |--------------------------------------------------------------------------
+        -->
+
+        <section
+            class="slide"
+            id="slide-domains"
+            aria-hidden="true"
+            aria-labelledby="domains-title"
+            data-runtime-section="domains"
+            data-runtime-surface="operational"
+        >
+
+            <div
+                class="
+                    slide-content
+                    runtime-stack
+                "
+            >
+
+                <header
+                    class="
+                        slide-header
+                        runtime-stack
+                    "
+                >
+
+                    <span class="slide-tag">
+                        Engineering Focus
+                    </span>
+
+                    <h2 id="domains-title">
+                        Core Software Engineering Areas
+                    </h2>
+
+                    <p class="section-introduction">
+
+                        Continuous exploration of backend systems,
+                        distributed architecture, frontend rendering
+                        systems and maintainable engineering
+                        ecosystems.
+
+                    </p>
+
+                </header>
+
+                <div
+                    class="
+                        cards-grid
+                        runtime-grid
+                    "
+                >
+
+                    <article class="info-card">
+                        <h3>
+                            Backend Platforms & APIs
+                        </h3>
+                    </article>
+
+                    <article class="info-card">
+                        <h3>
+                            Python Ecosystems
+                        </h3>
+                    </article>
+
+                    <article class="info-card">
+                        <h3>
+                            Distributed Systems
+                        </h3>
+                    </article>
+
+                    <article class="info-card">
+                        <h3>
+                            Frontend Architecture
+                        </h3>
+                    </article>
+
+                    <article class="info-card">
+                        <h3>
+                            Runtime Rendering Systems
+                        </h3>
+                    </article>
+
+                    <article class="info-card">
+                        <h3>
+                            CI/CD Pipelines
+                        </h3>
+                    </article>
+
+                    <article class="info-card">
+                        <h3>
+                            Engineering Documentation
+                        </h3>
+                    </article>
+
+                    <article class="info-card">
+                        <h3>
+                            Maintainable System Design
+                        </h3>
+                    </article>
 
                 </div>
 
@@ -257,75 +776,71 @@
 
         </section>
 
-        <!-- SLIDE 5 -->
+        <!--
+        |--------------------------------------------------------------------------
+        | Slide 6 — Contact
+        |--------------------------------------------------------------------------
+        -->
 
-        <section class="slide">
+        <section
+            class="slide"
+            id="slide-contact"
+            aria-hidden="true"
+            aria-labelledby="contact-title"
+            data-runtime-section="contact"
+            data-runtime-surface="narrative"
+        >
 
-            <div class="slide-content">
+            <div
+                class="
+                    slide-content
+                    runtime-stack
+                "
+            >
 
-                <span class="slide-tag">
-                    Engineering Domains
-                </span>
+                <header
+                    class="
+                        slide-header
+                        runtime-stack
+                    "
+                >
 
-                <h2>
-                    Applied Engineering Areas
-                </h2>
+                    <span class="slide-tag">
+                        Contact
+                    </span>
 
-                <div class="cards-grid">
+                    <h2 id="contact-title">
+                        Engineering Collaboration & Opportunities
+                    </h2>
+
+                    <p class="section-introduction">
+
+                        Available for backend engineering,
+                        frontend architecture, distributed systems
+                        and software engineering opportunities.
+
+                    </p>
+
+                </header>
+
+                <div
+                    class="
+                        cards-grid
+                        runtime-grid
+                    "
+                >
 
                     <article class="info-card">
-                        Backend Platforms & APIs
+
+                        <h3>
+                            Phone
+                        </h3>
+
+                        <p>
+                            +55 61 9 9844-1039
+                        </p>
+
                     </article>
-
-                    <article class="info-card">
-                        Python & Flask Ecosystems
-                    </article>
-
-                    <article class="info-card">
-                        Operational Systems Design
-                    </article>
-
-                    <article class="info-card">
-                        Institutional Workflow Integration
-                    </article>
-
-                    <article class="info-card">
-                        Architecture-Oriented Engineering
-                    </article>
-
-                    <article class="info-card">
-                        CI/CD & Delivery Flows
-                    </article>
-
-                    <article class="info-card">
-                        Modular Systems & Automation
-                    </article>
-
-                    <article class="info-card">
-                        AI-Assisted Engineering Laboratories
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- SLIDE 6 -->
-
-        <section class="slide">
-
-            <div class="slide-content">
-
-                <span class="slide-tag">
-                    Contact
-                </span>
-
-                <h2>
-                    Contact & Collaboration
-                </h2>
-
-                <div class="cards-grid">
 
                     <article class="info-card">
 
@@ -342,18 +857,6 @@
                     <article class="info-card">
 
                         <h3>
-                            Phone
-                        </h3>
-
-                        <p>
-                            +55 61 99844-1039
-                        </p>
-
-                    </article>
-
-                    <article class="info-card">
-
-                        <h3>
                             GitHub
                         </h3>
 
@@ -362,8 +865,29 @@
                             <a
                                 href="https://github.com/igniaction/"
                                 target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 github.com/igniaction
+                            </a>
+
+                        </p>
+
+                    </article>
+
+                    <article class="info-card">
+
+                        <h3>
+                            LinkedIn
+                        </h3>
+
+                        <p>
+
+                            <a
+                                href="https://www.linkedin.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                linkedin.com/in/richardsonalmeida
                             </a>
 
                         </p>
@@ -378,21 +902,45 @@
 
     </main>
 
-    <div class="navigation">
+    <!--
+    |--------------------------------------------------------------------------
+    | Navigation
+    |--------------------------------------------------------------------------
+    -->
 
-        <button onclick="moveSlide(-1)">
+    <nav
+        class="navigation"
+        aria-label="Slide navigation"
+    >
+
+        <button
+            type="button"
+            onclick="moveSlide(-1)"
+            aria-label="Previous slide"
+        >
             ←
         </button>
 
-        <button onclick="moveSlide(1)">
+        <button
+            type="button"
+            onclick="moveSlide(1)"
+            aria-label="Next slide"
+        >
             →
         </button>
 
-    </div>
+    </nav>
 
-    <script src="assets/js/main.js"></script>
+    <!--
+    |--------------------------------------------------------------------------
+    | Runtime Bootstrap
+    |--------------------------------------------------------------------------
+    -->
 
-    <script src="assets/js/lab-renderer.js"></script>
+    <script
+        type="module"
+        src="frontend/core/runtime/runtime.bootstrap.js"
+    ></script>
 
 </body>
 

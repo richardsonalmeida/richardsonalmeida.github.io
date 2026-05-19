@@ -1,0 +1,600 @@
+/* =========================================================
+   OPERATIONAL VISUAL FOUNDATION
+   =========================================================
+
+   PURPOSE
+   ---------------------------------------------------------
+   Foundational visual runtime infrastructure responsible for:
+
+   - cascade governance
+   - token systems
+   - typography primitives
+   - spacing systems
+   - semantic surfaces
+   - viewport orchestration
+   - accessibility baseline
+   - motion governance
+   - runtime-safe layout primitives
+
+   IMPORTANT
+   ---------------------------------------------------------
+   This file MUST NOT contain:
+   - component styling
+   - contextual styling
+   - page-specific styling
+   - runtime narrative styling
+   - experimental styling
+
+   ========================================================= */
+
+
+/* =========================================================
+   CASCADE GOVERNANCE
+   ========================================================= */
+
+@layer
+    reset,
+    tokens,
+    accessibility,
+    primitives,
+    layout,
+    runtime;
+
+
+/* =========================================================
+   RESET LAYER
+   ========================================================= */
+
+@layer reset {
+
+    *,
+    *::before,
+    *::after {
+
+        box-sizing: border-box;
+    }
+
+    * {
+
+        margin: 0;
+    }
+
+    html {
+
+        -webkit-text-size-adjust: 100%;
+
+        text-size-adjust: 100%;
+
+        color-scheme: dark;
+
+        scroll-behavior: smooth;
+    }
+
+    body {
+
+        min-height: 100dvh;
+    }
+
+    img,
+    picture,
+    svg,
+    video,
+    canvas {
+
+        display: block;
+
+        max-inline-size: 100%;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+
+        font: inherit;
+    }
+
+    button {
+
+        border: none;
+
+        background: none;
+
+        color: inherit;
+
+        cursor: pointer;
+    }
+
+    a {
+
+        color: inherit;
+
+        text-decoration: none;
+    }
+}
+
+
+/* =========================================================
+   TOKEN SYSTEM
+   ========================================================= */
+
+@layer tokens {
+
+    :root {
+
+        /* =================================================
+           COLOR TOKENS
+           ================================================= */
+
+        --color-bg-canvas:
+            #020617;
+
+        --color-bg-elevated:
+            #0f172a;
+
+        --color-bg-overlay:
+            #111827;
+
+        --color-surface-1:
+            rgba(15, 23, 42, 0.68);
+
+        --color-surface-2:
+            rgba(15, 23, 42, 0.82);
+
+        --color-surface-3:
+            rgba(15, 23, 42, 0.94);
+
+        --color-surface-glass:
+            rgba(15, 23, 42, 0.72);
+
+        --color-border-subtle:
+            rgba(148, 163, 184, 0.08);
+
+        --color-border-medium:
+            rgba(148, 163, 184, 0.16);
+
+        --color-border-accent:
+            rgba(56, 189, 248, 0.24);
+
+        --color-text-primary:
+            #f8fafc;
+
+        --color-text-secondary:
+            #cbd5e1;
+
+        --color-text-muted:
+            #94a3b8;
+
+        --color-text-disabled:
+            #64748b;
+
+        --color-accent-primary:
+            #38bdf8;
+
+        --color-accent-soft:
+            rgba(56, 189, 248, 0.12);
+
+        --color-accent-strong:
+            rgba(56, 189, 248, 0.92);
+
+        /* =================================================
+           TYPOGRAPHY TOKENS
+           ================================================= */
+
+        --font-family-base:
+            Inter,
+            ui-sans-serif,
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            sans-serif;
+
+        --font-size-xs:
+            clamp(0.72rem, 0.7rem + 0.1vw, 0.82rem);
+
+        --font-size-sm:
+            clamp(0.86rem, 0.82rem + 0.2vw, 1rem);
+
+        --font-size-md:
+            clamp(1rem, 0.96rem + 0.24vw, 1.12rem);
+
+        --font-size-lg:
+            clamp(1.2rem, 1rem + 0.5vw, 1.5rem);
+
+        --font-size-xl:
+            clamp(2rem, 1.6rem + 2vw, 3.6rem);
+
+        --font-size-display:
+            clamp(3rem, 5vw, 5.4rem);
+
+        --line-height-tight:
+            1.08;
+
+        --line-height-base:
+            1.7;
+
+        --line-height-relaxed:
+            1.9;
+
+        /* =================================================
+           SPACING TOKENS
+           ================================================= */
+
+        --space-2xs:
+            clamp(0.25rem, 0.2rem + 0.1vw, 0.4rem);
+
+        --space-xs:
+            clamp(0.5rem, 0.45rem + 0.2vw, 0.75rem);
+
+        --space-sm:
+            clamp(0.8rem, 0.7rem + 0.3vw, 1rem);
+
+        --space-md:
+            clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+
+        --space-lg:
+            clamp(1.5rem, 1.2rem + 0.8vw, 2rem);
+
+        --space-xl:
+            clamp(2rem, 1.8rem + 1.8vw, 4rem);
+
+        --space-2xl:
+            clamp(3rem, 2rem + 3vw, 6rem);
+
+        /* =================================================
+           RADIUS TOKENS
+           ================================================= */
+
+        --radius-sm:
+            14px;
+
+        --radius-md:
+            22px;
+
+        --radius-lg:
+            30px;
+
+        --radius-round:
+            999px;
+
+        /* =================================================
+           SHADOW TOKENS
+           ================================================= */
+
+        --shadow-sm:
+            0 8px 24px rgba(0, 0, 0, 0.18);
+
+        --shadow-md:
+            0 16px 42px rgba(0, 0, 0, 0.24);
+
+        --shadow-lg:
+            0 24px 70px rgba(0, 0, 0, 0.34);
+
+        /* =================================================
+           MOTION TOKENS
+           ================================================= */
+
+        --transition-fast:
+            180ms ease;
+
+        --transition-base:
+            300ms cubic-bezier(0.22, 1, 0.36, 1);
+
+        --transition-slow:
+            600ms cubic-bezier(0.22, 1, 0.36, 1);
+
+        /* =================================================
+           VIEWPORT TOKENS
+           ================================================= */
+
+        --viewport-safe-inline:
+            clamp(1rem, 3vw, 3rem);
+
+        --viewport-safe-block:
+            clamp(1rem, 3vw, 3rem);
+
+        --container-wide:
+            min(1600px, 100% - 2rem);
+
+        --container-reading:
+            min(74ch, 100%);
+
+        --navigation-size:
+            clamp(52px, 5vw, 60px);
+
+        /* =================================================
+           EFFECT TOKENS
+           ================================================= */
+
+        --blur-soft:
+            blur(8px);
+
+        --blur-medium:
+            blur(14px);
+
+        --blur-strong:
+            blur(20px);
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY LAYER
+   ========================================================= */
+
+@layer accessibility {
+
+    :focus-visible {
+
+        outline:
+            2px solid var(--color-accent-primary);
+
+        outline-offset:
+            4px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+        * {
+
+            animation-duration:
+                0.01ms !important;
+
+            animation-iteration-count:
+                1 !important;
+
+            transition-duration:
+                0.01ms !important;
+
+            scroll-behavior:
+                auto !important;
+        }
+    }
+}
+
+
+/* =========================================================
+   TYPOGRAPHY PRIMITIVES
+   ========================================================= */
+
+@layer primitives {
+
+    body {
+
+        background:
+            radial-gradient(
+                circle at top,
+                rgba(56, 189, 248, 0.05),
+                transparent 34%
+            ),
+            var(--color-bg-canvas);
+
+        color:
+            var(--color-text-primary);
+
+        font-family:
+            var(--font-family-base);
+
+        line-height:
+            var(--line-height-base);
+
+        overflow-x:
+            clip;
+
+        text-rendering:
+            optimizeLegibility;
+
+        -webkit-font-smoothing:
+            antialiased;
+    }
+
+    h1 {
+
+        font-size:
+            var(--font-size-display);
+
+        line-height:
+            var(--line-height-tight);
+
+        letter-spacing:
+            -0.05em;
+
+        max-inline-size:
+            12ch;
+    }
+
+    h2 {
+
+        font-size:
+            var(--font-size-xl);
+
+        line-height:
+            1.12;
+
+        letter-spacing:
+            -0.04em;
+
+        max-inline-size:
+            14ch;
+    }
+
+    h3 {
+
+        font-size:
+            var(--font-size-lg);
+
+        line-height:
+            1.3;
+    }
+
+    p {
+
+        max-inline-size:
+            72ch;
+
+        color:
+            var(--color-text-secondary);
+    }
+}
+
+
+/* =========================================================
+   LAYOUT PRIMITIVES
+   ========================================================= */
+
+@layer layout {
+
+    .runtime-shell {
+
+        inline-size: 100%;
+
+        min-block-size: 100dvh;
+    }
+
+    .runtime-container {
+
+        inline-size:
+            var(--container-wide);
+
+        margin-inline:
+            auto;
+    }
+
+    .runtime-stack {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap:
+            var(--space-lg);
+    }
+
+    .runtime-grid {
+
+        display: grid;
+
+        gap:
+            var(--space-lg);
+    }
+
+    .runtime-reading-flow {
+
+        max-inline-size:
+            var(--container-reading);
+    }
+}
+
+
+/* =========================================================
+   RUNTIME FOUNDATIONS
+   ========================================================= */
+
+@layer runtime {
+
+    .slider-container {
+
+        position: relative;
+
+        display: flex;
+
+        inline-size: 100%;
+
+        min-block-size: 100dvh;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        scroll-snap-type: x mandatory;
+
+        scroll-behavior: smooth;
+
+        scrollbar-width: none;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .slider-container::-webkit-scrollbar {
+
+        display: none;
+    }
+
+    .slide {
+
+        position: relative;
+
+        isolation: isolate;
+
+        flex: 0 0 100%;
+
+        min-block-size: 100dvh;
+
+        scroll-snap-align: start;
+
+        overflow: clip;
+
+        padding-inline:
+            max(
+                env(safe-area-inset-left),
+                var(--viewport-safe-inline)
+            );
+
+        padding-block:
+            max(
+                env(safe-area-inset-top),
+                var(--viewport-safe-block)
+            );
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+    }
+
+    .slide-content {
+
+        inline-size:
+            var(--container-wide);
+
+        margin-inline:
+            auto;
+
+        position: relative;
+
+        z-index: 2;
+    }
+
+    .skip-navigation {
+
+        position: absolute;
+
+        inset-inline-start: -9999px;
+    }
+
+    .skip-navigation:focus {
+
+        inset-inline-start:
+            1rem;
+
+        inset-block-start:
+            1rem;
+
+        z-index:
+            9999;
+
+        padding:
+            0.8rem 1rem;
+
+        border-radius:
+            var(--radius-sm);
+
+        background:
+            var(--color-surface-3);
+
+        border:
+            1px solid var(--color-border-accent);
+    }
+}

@@ -1,0 +1,512 @@
+/* =========================================================
+   ADAPTIVE RUNTIME RESPONSIVENESS
+   =========================================================
+
+   PURPOSE
+   ---------------------------------------------------------
+   Governs:
+   - adaptive runtime behavior
+   - contextual responsiveness
+   - cognitive density adaptation
+   - spatial orchestration
+   - runtime mode transitions
+   - touch ergonomics
+   - ultrawide adaptation
+
+   IMPORTANT
+   ---------------------------------------------------------
+   This file MUST NOT:
+   - redefine themes
+   - redefine typography foundations
+   - redefine tokens
+   - redefine component aesthetics
+   - contain contextual hacks
+
+   ========================================================= */
+
+
+/* =========================================================
+   CASCADE LAYER
+   ========================================================= */
+
+@layer responsive;
+
+
+/* =========================================================
+   RESPONSIVE FOUNDATIONS
+   ========================================================= */
+
+@layer responsive {
+
+    .slide-content {
+
+        min-block-size:
+            100%;
+    }
+
+    .runtime-grid {
+
+        grid-template-columns:
+            repeat(
+                auto-fit,
+                minmax(
+                    min(100%, 320px),
+                    1fr
+                )
+            );
+    }
+
+    .cards-grid,
+    .labs-grid {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(
+                auto-fit,
+                minmax(
+                    min(100%, 320px),
+                    1fr
+                )
+            );
+
+        gap:
+            clamp(
+                1rem,
+                2vw,
+                2rem
+            );
+    }
+}
+
+
+/* =========================================================
+   FLUID TYPOGRAPHY ADAPTATION
+   ========================================================= */
+
+@layer responsive {
+
+    h1 {
+
+        font-size:
+            clamp(
+                2.6rem,
+                6vw,
+                5.6rem
+            );
+
+        max-inline-size:
+            12ch;
+    }
+
+    h2 {
+
+        font-size:
+            clamp(
+                1.8rem,
+                4vw,
+                3.2rem
+            );
+    }
+
+    p,
+    .hero-description,
+    .section-introduction {
+
+        font-size:
+            clamp(
+                0.98rem,
+                0.92rem + 0.2vw,
+                1.1rem
+            );
+    }
+}
+
+
+/* =========================================================
+   VIEWPORT DENSITY SYSTEM
+   ========================================================= */
+
+@layer responsive {
+
+    .slide {
+
+        padding-inline:
+            clamp(
+                1rem,
+                4vw,
+                5rem
+            );
+
+        padding-block:
+            clamp(
+                2rem,
+                4vw,
+                5rem
+            );
+    }
+
+    .info-card,
+    .lab-card {
+
+        padding:
+            clamp(
+                1.2rem,
+                2vw,
+                2.2rem
+            );
+    }
+}
+
+
+/* =========================================================
+   TABLET ADAPTATION
+   ========================================================= */
+
+@layer responsive {
+
+    @media (max-width: 1024px) {
+
+        .slide {
+
+            align-items:
+                flex-start;
+        }
+
+        .slide-content {
+
+            justify-content:
+                flex-start;
+
+            padding-block-start:
+                var(--space-lg);
+        }
+
+        .operational-progress-rail {
+
+            inset-inline-start:
+                1rem;
+        }
+
+        .runtime-grid,
+        .cards-grid,
+        .labs-grid {
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(260px, 1fr)
+                );
+        }
+    }
+}
+
+
+/* =========================================================
+   MOBILE RUNTIME MODE
+   ========================================================= */
+
+@layer responsive {
+
+    @media (max-width: 768px) {
+
+        /*
+        -----------------------------------------------------
+        Runtime Mode Shift
+        -----------------------------------------------------
+
+        Mobile transitions from:
+        - cinematic runtime
+        into:
+        - narrative operational flow
+
+        -----------------------------------------------------
+        */
+
+        .slider-container {
+
+            display: block;
+
+            overflow-x:
+                hidden;
+
+            overflow-y:
+                auto;
+
+            scroll-snap-type:
+                none;
+
+            min-block-size:
+                auto;
+        }
+
+        .slide {
+
+            min-block-size:
+                auto;
+
+            overflow:
+                clip;
+
+            border-block-end:
+                1px solid var(--color-border-subtle);
+
+            padding-block:
+                clamp(
+                    4rem,
+                    8vw,
+                    6rem
+                );
+        }
+
+        .slide-content {
+
+            min-block-size:
+                auto;
+
+            justify-content:
+                flex-start;
+        }
+
+        /*
+        -----------------------------------------------------
+        Spatial Awareness
+        -----------------------------------------------------
+        */
+
+        .operational-progress-rail {
+
+            display:
+                none;
+        }
+
+        .operational-section-indicator {
+
+            inset-inline-start:
+                50%;
+
+            transform:
+                translateX(-50%);
+        }
+
+/*
+-----------------------------------------------------
+Navigation Adaptation
+-----------------------------------------------------
+*/
+
+.navigation {
+
+    inset-inline:
+        50% auto auto 50%;
+
+    transform:
+        translateX(-50%);
+
+    inset-block-end:
+        max(
+            env(safe-area-inset-bottom),
+            1rem
+        );
+
+    padding:
+        0.4rem;
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(2, 6, 23, 0.72);
+
+    backdrop-filter:
+        blur(16px);
+
+    border:
+        1px solid rgba(148, 163, 184, 0.08);
+
+    box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.28);
+}
+
+
+
+.navigation button {
+
+    inline-size:
+        58px;
+
+    block-size:
+        58px;
+}
+        -----------------------------------------------------
+        Runtime Density Reduction
+        -----------------------------------------------------
+        */
+
+        .runtime-grid,
+        .cards-grid,
+        .labs-grid {
+
+            gap:
+                1rem;
+        }
+
+        .info-card,
+        .lab-card {
+
+            padding:
+                1.4rem;
+        }
+
+        /*
+        -----------------------------------------------------
+        Interaction Ergonomics
+        -----------------------------------------------------
+        */
+
+        .hero-links {
+
+            flex-direction:
+                column;
+
+            align-items:
+                stretch;
+        }
+
+        .hero-link,
+        .hero-links a {
+
+            inline-size:
+                100%;
+        }
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@layer responsive {
+
+    @media (max-width: 480px) {
+
+        h1 {
+
+            max-inline-size:
+                100%;
+        }
+
+        .navigation {
+
+            inline-size:
+                calc(100% - 2rem);
+
+            justify-content:
+                center;
+        }
+
+        .info-card,
+        .lab-card {
+
+            border-radius:
+                18px;
+        }
+    }
+}
+
+
+/* =========================================================
+   LANDSCAPE MOBILE
+   ========================================================= */
+
+@layer responsive {
+
+    @media (max-height: 520px)
+    and (orientation: landscape) {
+
+        .slide {
+
+            min-block-size:
+                auto;
+        }
+
+        .slide-content {
+
+            padding-block:
+                2rem;
+        }
+
+        .navigation {
+
+            inset-block-end:
+                0.8rem;
+        }
+    }
+}
+
+
+/* =========================================================
+   ULTRAWIDE RUNTIME
+   ========================================================= */
+
+@layer responsive {
+
+    @media (min-width: 1800px) {
+
+        .slide-content {
+
+            max-inline-size:
+                1680px;
+        }
+
+        .runtime-grid,
+        .cards-grid,
+        .labs-grid {
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(360px, 1fr)
+                );
+        }
+    }
+}
+
+
+/* =========================================================
+   TOUCH INTERACTION GOVERNANCE
+   ========================================================= */
+
+@layer responsive {
+
+    @media (hover: none) {
+
+        .info-card:hover,
+        .lab-card:hover,
+        .hero-link:hover,
+        .capability-link:hover,
+        .navigation button:hover {
+
+            transform:
+                none;
+        }
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY ADAPTATION
+   ========================================================= */
+
+@layer responsive {
+
+    @media (prefers-reduced-motion: reduce) {
+
+        .slider-container {
+
+            scroll-behavior:
+                auto;
+        }
+    }
+}
