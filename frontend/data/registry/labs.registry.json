@@ -1,0 +1,209 @@
+{
+    "registry":
+        "engineering-capabilities",
+
+    "version":
+        "2.0.0",
+
+    "architecture":
+        "modular-engineering-platform",
+
+    "runtimeStrategy":
+        "progressive-capability-rendering",
+
+    "discoverability":
+        "engineering-case-navigation",
+
+    "labs": [
+
+        {
+            "id":
+                "operational-cockpit",
+
+            "enabled":
+                true,
+
+            "source":
+                "/frontend/data/labs/operational-cockpit.json",
+
+            "template":
+                "/frontend/data/templates/lab.template.json",
+
+            "theme":
+                "operational",
+
+            "category":
+                "backend-architecture",
+
+            "domain":
+                "identity-management",
+
+            "visibility":
+                "public",
+
+            "featured":
+                true,
+
+            "onboarding":
+                true,
+
+            "exploratory":
+                true,
+
+            "experimental":
+                false,
+
+            "runtimePriority":
+                "hero",
+
+            "revealPriority":
+                1,
+
+            "narrativeOrder":
+                1,
+
+            "visualWeight":
+                "high",
+
+            "cognitiveDensity":
+                "moderate",
+
+            "progressiveReveal":
+                true,
+
+            "deferredHydration":
+                false,
+
+            "lazyRendering":
+                true,
+
+            "mobileOptimized":
+                true,
+
+            "reducedMotionSupport":
+                true,
+
+            "lowPowerRuntime":
+                true,
+
+            "group":
+                "core-engineering-platforms",
+
+            "tags": [
+
+                "backend-architecture",
+                "identity-management",
+                "distributed-systems",
+                "framework-agnostic",
+                "clean-architecture",
+                "runtime-observability"
+
+            ],
+
+            "fallbackRuntime":
+                true,
+
+            "allowGracefulDegradation":
+                true,
+
+            "retryHydration":
+                true
+
+        },
+
+        {
+            "id":
+                "trilha-mapa",
+
+            "enabled":
+                true,
+
+            "source":
+                "/frontend/data/labs/trilha-mapa.json",
+
+            "template":
+                "/frontend/data/templates/lab.template.json",
+
+            "theme":
+                "operational",
+
+            "category":
+                "operational-platform",
+
+            "domain":
+                "workflow-engineering",
+
+            "visibility":
+                "public",
+
+            "featured":
+                true,
+
+            "onboarding":
+                true,
+
+            "exploratory":
+                true,
+
+            "experimental":
+                false,
+
+            "runtimePriority":
+                "high",
+
+            "revealPriority":
+                2,
+
+            "narrativeOrder":
+                2,
+
+            "visualWeight":
+                "high",
+
+            "cognitiveDensity":
+                "moderate",
+
+            "progressiveReveal":
+                true,
+
+            "deferredHydration":
+                false,
+
+            "lazyRendering":
+                true,
+
+            "mobileOptimized":
+                true,
+
+            "reducedMotionSupport":
+                true,
+
+            "lowPowerRuntime":
+                true,
+
+            "group":
+                "live-engineering-platforms",
+
+            "tags": [
+
+                "workflow-engineering",
+                "operational-platform",
+                "flask",
+                "engineering-visibility",
+                "lifecycle-management"
+
+            ],
+
+            "fallbackRuntime":
+                true,
+
+            "allowGracefulDegradation":
+                true,
+
+            "retryHydration":
+                true
+
+        }
+
+    ]
+}

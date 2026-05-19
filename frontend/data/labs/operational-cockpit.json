@@ -1,0 +1,269 @@
+{
+  
+
+    "id":
+        "operational-identity-core",
+
+    "title":
+        "Operational Identity Core",
+
+    "headline":
+        "Framework-Agnostic Identity & Permission Architecture",
+
+  
+
+    "ptBr":
+        "Arquitetura backend reutilizável para gerenciamento de identidade, papéis organizacionais, permissões distribuídas e propagação de autenticação desacoplada de frameworks específicos.",
+
+    "en":
+        "Reusable backend architecture for identity management, organizational roles, distributed permissions and framework-agnostic authentication propagation.",
+
+
+
+    "category":
+        "backend-architecture",
+
+    "domain":
+        "identity-management",
+
+    "architecture":
+        "distributed-identity-platform",
+
+
+
+    "capabilityStatus": {
+
+        "maturity":
+            "production-oriented",
+
+        "stability":
+            "active-evolution",
+
+        "architectureReadiness":
+            "high",
+
+        "documentationCoverage":
+            "extensive"
+
+    },
+
+
+    "architecturePrinciples": [
+
+        "Framework Agnostic",
+        "Domain Driven Design",
+        "Clean Architecture",
+        "Repository Pattern",
+        "Capability Based Design",
+        "Observability",
+        "Maintainability"
+
+    ],
+
+ 
+
+    "engineeringCoverage": [
+
+        "Identity Resolution",
+        "Authentication Propagation",
+        "Permission Aggregation",
+        "Organizational Roles",
+        "Framework-Agnostic Adapters",
+        "Distributed Authorization",
+        "Operational Observability"
+
+    ],
+
+  
+
+    "architectureCoverage": [
+
+        "Clean Architecture",
+        "Repository Layer",
+        "Domain Services",
+        "Runtime Adapters",
+        "Persistence Isolation",
+        "Observability Pipelines"
+
+    ],
+
+ 
+
+    "repositoryStructure": [
+
+        "alembic/",
+        "docs/",
+        "examples/",
+        "operational_identity_core/",
+        "scripts/",
+        "tests/"
+
+    ],
+
+   
+
+    "stack": {
+
+        "language": [
+
+            "Python"
+
+        ],
+
+        "database": [
+
+            "PostgreSQL"
+
+        ],
+
+        "orm": [
+
+            "SQLAlchemy"
+
+        ],
+
+        "migration": [
+
+            "Alembic"
+
+        ],
+
+        "validation": [
+
+            "Pydantic"
+
+        ],
+
+        "testing": [
+
+            "Pytest"
+
+        ],
+
+        "infrastructure": [
+
+            "Docker"
+
+        ],
+
+        "quality": [
+
+            "Ruff",
+            "mypy"
+
+        ],
+
+        "automation": [
+
+            "GitHub Actions"
+
+        ]
+
+    },
+
+   
+
+    "qualityEngineering": [
+
+        "Pytest",
+        "Ruff",
+        "mypy",
+        "GitHub Actions",
+        "Dockerized Runtime"
+
+    ],
+
+
+
+    "documentation": {
+
+        "Architecture": [
+
+            "docs/architecture.md"
+
+        ],
+
+        "System Diagrams": [
+
+            "docs/diagrams/system-context.md",
+            "docs/diagrams/container-view.md",
+            "docs/diagrams/component-view.md",
+            "docs/diagrams/runtime-flow.md"
+
+        ],
+
+        "Operational Flows": [
+
+            "docs/request-lifecycle.md",
+            "docs/identity-propagation.md",
+            "docs/permission-aggregation.md",
+            "docs/observability-pipeline.md",
+            "docs/persistence-lifecycle.md",
+            "docs/runtime-portability.md"
+
+        ]
+
+    },
+
+
+
+    "strategicDocumentation": {
+
+        "Engineering Strategy": [
+
+            "docs/roadmap.md",
+            "docs/ecosystem.md",
+            "docs/interoperability.md",
+            "docs/future-runtime-adapters.md",
+            "docs/platform-vision.md"
+
+        ]
+
+    },
+
+ 
+
+    "featured":
+        true,
+
+    "exploratory":
+        true,
+
+    "onboarding":
+        true,
+
+    "runtimePriority":
+        "hero",
+
+    "revealPriority":
+        1,
+
+    "visualWeight":
+        "high",
+
+    "cognitiveDensity":
+        "moderate",
+
+ 
+
+    "runtimeSupport": {
+
+        "mobileOptimized":
+            true,
+
+        "reducedMotionSupport":
+            true,
+
+        "lazyHydration":
+            true,
+
+        "progressiveReveal":
+            true
+
+    },
+
+ 
+    "repository":
+        "https://github.com/igniaction/operational-identity-core"
+
+}
