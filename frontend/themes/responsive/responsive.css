@@ -297,11 +297,10 @@ Navigation Adaptation
 
 .navigation {
 
-    inset-inline:
-        50% auto auto 50%;
+    position: fixed;
 
-    transform:
-        translateX(-50%);
+    inset-inline:
+        1rem;
 
     inset-block-end:
         max(
@@ -309,8 +308,17 @@ Navigation Adaptation
             1rem
         );
 
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap:
+        1rem;
+
     padding:
-        0.4rem;
+        0.5rem;
 
     border-radius:
         999px;
@@ -326,62 +334,27 @@ Navigation Adaptation
 
     box-shadow:
         0 12px 32px rgba(0, 0, 0, 0.28);
+
+    z-index:
+        5000;
 }
 
 
 
 .navigation button {
 
+    flex:
+        1;
+
     inline-size:
+        auto;
+
+    min-inline-size:
         58px;
 
     block-size:
         58px;
 }
-        -----------------------------------------------------
-        Runtime Density Reduction
-        -----------------------------------------------------
-        */
-
-        .runtime-grid,
-        .cards-grid,
-        .labs-grid {
-
-            gap:
-                1rem;
-        }
-
-        .info-card,
-        .lab-card {
-
-            padding:
-                1.4rem;
-        }
-
-        /*
-        -----------------------------------------------------
-        Interaction Ergonomics
-        -----------------------------------------------------
-        */
-
-        .hero-links {
-
-            flex-direction:
-                column;
-
-            align-items:
-                stretch;
-        }
-
-        .hero-link,
-        .hero-links a {
-
-            inline-size:
-                100%;
-        }
-    }
-}
-
 
 /* =========================================================
    SMALL MOBILE
