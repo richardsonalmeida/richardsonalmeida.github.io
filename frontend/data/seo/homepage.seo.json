@@ -1,0 +1,46 @@
+{
+  "slug": "homepage",
+
+  "title": "Richardson Almeida | Senior Backend & Systems Integration Engineer",
+
+  "description": "Senior Backend Engineer specialized in Python, Flask, PostgreSQL, systems integration, GovTech and operational architecture across institutional platforms.",
+
+  "keywords": [
+    "Senior Backend Engineer",
+    "Senior Software Engineer",
+    "Systems Integration",
+    "Python",
+    "Flask",
+    "SQLAlchemy",
+    "REST APIs",
+    "PostgreSQL",
+    "Linux",
+    "Operational Architecture",
+    "GovTech",
+    "Institutional Systems",
+    "Workflow Orchestration",
+    "Backend Development"
+  ],
+
+  "author": "Richardson Almeida",
+
+  "canonical": "https://richardsonalmeida.github.io/",
+
+  "robots": "index, follow",
+
+  "h1": "Senior Backend & Systems Integration Engineer",
+
+  "h2": [
+    "Backend Engineering",
+    "Systems Integration",
+    "Operational Architecture",
+    "GovTech Platforms"
+  ],
+
+  "openGraph": {
+    "title": "Richardson Almeida | Backend Engineering",
+    "description": "Backend engineering, systems integration and operational architecture across institutional platforms.",
+    "type": "website",
+    "url": "https://richardsonalmeida.github.io/"
+  }
+}

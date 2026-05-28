@@ -1,0 +1,106 @@
+{
+  "slug": "govtech",
+
+  "title": "GovTech Engineering | Public Digital Infrastructure & Operational Platforms",
+
+  "description": "GovTech engineering involving institutional platforms, public digital infrastructure, operational workflows and backend systems integration.",
+
+  "keywords": [
+
+    "GovTech",
+    "Public Digital Infrastructure",
+    "Institutional Platforms",
+    "Backend Systems",
+    "Systems Integration",
+    "Operational Workflows",
+    "Regulatory Technology",
+    "Operational Architecture"
+
+  ],
+
+  "hero": {
+
+    "tag": "GovTech Engineering",
+
+    "headline": "Operational Platforms & Public Digital Infrastructure",
+
+    "subheadline": "Engineering participation involving institutional systems, operational workflows, backend integrations and maintainable GovTech ecosystems."
+
+  },
+
+  "sections": [
+
+    {
+
+      "title": "GovTech Systems",
+
+      "content": [
+
+        "Participation in operationally complex institutional platforms involving backend systems and distributed integrations.",
+
+        "Engineering coordination involving workflows, interoperability and operational continuity across public digital ecosystems.",
+
+        "Backend and operational architecture participation across regulatory and institutional environments."
+
+      ]
+
+    },
+
+    {
+
+      "title": "Institutional Engineering Context",
+
+      "content": [
+
+        "Regulatory systems",
+
+        "Institutional workflows",
+
+        "Operational coordination",
+
+        "Backend integration ecosystems",
+
+        "Distributed government platforms"
+
+      ]
+
+    },
+
+    {
+
+      "title": "Operational Sustainability",
+
+      "content": [
+
+        "Maintainable operational systems focused on workflow continuity and engineering sustainability.",
+
+        "Coordination between institutional requirements and technical implementation realities.",
+
+        "Operational visibility across distributed engineering ecosystems."
+
+      ]
+
+    }
+
+  ],
+  
+  "relatedPages": [
+
+    {
+      "slug": "backend-engineering",
+      "title": "Backend Engineering"
+    },
+
+    {
+      "slug": "govtech",
+      "title": "GovTech Engineering"
+    },
+
+    {
+      "slug": "operational-architecture",
+      "title": "Operational Architecture"
+    }
+
+  ]
+
+}

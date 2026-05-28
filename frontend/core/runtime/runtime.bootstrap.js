@@ -1,10 +1,11 @@
-
-
 import { RUNTIME_STATE }
 from "../state/runtime.state.js";
 
 import { initializeRuntime }
 from "./runtime.controller.js";
+
+import { initializeSeo }
+from "../seo/seo.controller.js";
 
 
 document.addEventListener(
@@ -45,6 +46,12 @@ async function bootstrapEngineeringPlatform() {
 
 
 
+/*
+|--------------------------------------------------------------------------
+| Bootstrap State
+|--------------------------------------------------------------------------
+*/
+
 function initializeBootstrapState() {
 
     RUNTIME_STATE.bootstrapping =
@@ -63,6 +70,12 @@ function initializeBootstrapState() {
 }
 
 
+
+/*
+|--------------------------------------------------------------------------
+| Environment Synchronization
+|--------------------------------------------------------------------------
+*/
 
 function synchronizeEnvironment() {
 
@@ -89,9 +102,28 @@ function synchronizeEnvironment() {
 
 
 
+/*
+|--------------------------------------------------------------------------
+| Runtime Initialization
+|--------------------------------------------------------------------------
+*/
+
 async function initializeApplicationRuntime() {
 
- 
+    /*
+    |--------------------------------------------------------------------------
+    | Semantic SEO Layer
+    |--------------------------------------------------------------------------
+    */
+
+    await initializeSeo();
+
+    /*
+    |--------------------------------------------------------------------------
+    | Runtime Rendering Layer
+    |--------------------------------------------------------------------------
+    */
+
     await nextFrame();
 
     await initializeRuntime();
@@ -99,6 +131,12 @@ async function initializeApplicationRuntime() {
 }
 
 
+
+/*
+|--------------------------------------------------------------------------
+| Runtime Finalization
+|--------------------------------------------------------------------------
+*/
 
 function finalizePlatformBootstrap() {
 
@@ -124,6 +162,12 @@ function finalizePlatformBootstrap() {
 }
 
 
+
+/*
+|--------------------------------------------------------------------------
+| Runtime Failure Handling
+|--------------------------------------------------------------------------
+*/
 
 function handlePlatformFailure(error) {
 
@@ -155,6 +199,12 @@ function handlePlatformFailure(error) {
 
 
 
+/*
+|--------------------------------------------------------------------------
+| Runtime Events
+|--------------------------------------------------------------------------
+*/
+
 function dispatchRuntimeReadyEvent() {
 
     window.dispatchEvent(
@@ -166,6 +216,8 @@ function dispatchRuntimeReadyEvent() {
     );
 
 }
+
+
 
 function dispatchRuntimeFailureEvent(error) {
 
@@ -189,9 +241,16 @@ function dispatchRuntimeFailureEvent(error) {
 
 
 
+/*
+|--------------------------------------------------------------------------
+| Frame Synchronization
+|--------------------------------------------------------------------------
+*/
+
 function nextFrame() {
 
     return new Promise(
+
         (resolve) => {
 
             requestAnimationFrame(
@@ -199,6 +258,7 @@ function nextFrame() {
             );
 
         }
+
     );
 
 }

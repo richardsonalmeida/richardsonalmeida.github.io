@@ -1,0 +1,111 @@
+{
+  "slug": "backend-engineering",
+
+  "title": "Backend Engineering | Python, Flask, PostgreSQL & REST APIs",
+
+  "description": "Backend engineering focused on Python, Flask, PostgreSQL, REST APIs, systems integration and maintainable operational platforms.",
+
+  "keywords": [
+
+    "Senior Backend Engineer",
+    "Python Backend",
+    "Flask",
+    "SQLAlchemy",
+    "REST APIs",
+    "PostgreSQL",
+    "Backend Systems",
+    "Operational Architecture",
+    "Systems Integration",
+    "GovTech"
+
+  ],
+
+  "hero": {
+
+    "tag": "Backend Engineering",
+
+    "headline": "Python Backend Systems & Operational Architecture",
+
+    "subheadline": "Backend engineering involving Python, Flask, REST APIs, PostgreSQL and systems integration across operationally complex institutional platforms."
+
+  },
+
+  "sections": [
+
+    {
+
+      "title": "Backend Engineering Approach",
+
+      "content": [
+
+        "Backend engineering focused on maintainability, operational clarity and long-term system sustainability.",
+
+        "Experience involving Python backend systems, REST APIs, distributed integrations and maintainable software architecture.",
+
+        "Engineering participation across institutional workflows, operational ecosystems and backend modernization initiatives."
+
+      ]
+
+    },
+
+    {
+
+      "title": "Core Backend Stack",
+
+      "content": [
+
+        "Python",
+
+        "Flask",
+
+        "SQLAlchemy",
+
+        "REST APIs",
+
+        "PostgreSQL",
+
+        "Linux Environments",
+
+        "CI/CD-Oriented Processes"
+
+      ]
+
+    },
+
+    {
+
+      "title": "Operational Engineering Context",
+
+      "content": [
+
+        "Backend systems integrated with operational workflows and institutional platforms.",
+
+        "Systems integration involving regulatory environments, distributed services and operational coordination.",
+
+        "Maintainable backend architecture designed for complex operational ecosystems."
+
+      ]
+
+    }
+
+  ],
+  
+  "relatedPages": [
+
+    {
+      "slug": "systems-integration",
+      "title": "Systems Integration"
+    },
+
+    {
+      "slug": "govtech",
+      "title": "GovTech Engineering"
+    },
+
+    {
+      "slug": "operational-architecture",
+      "title": "Operational Architecture"
+    }
+
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "slug": "systems-integration",
+
+  "title": "Systems Integration | Institutional Platforms & Operational Workflows",
+
+  "description": "Systems integration involving institutional platforms, operational workflows, distributed services and GovTech ecosystems.",
+
+  "keywords": [
+
+    "Systems Integration",
+    "Institutional Systems",
+    "GovTech",
+    "Operational Workflows",
+    "Backend Integration",
+    "Distributed Services",
+    "Workflow Orchestration",
+    "Regulatory Platforms"
+
+  ],
+
+  "hero": {
+
+    "tag": "Systems Integration",
+
+    "headline": "Institutional Systems & Operational Integrations",
+
+    "subheadline": "Systems integration involving backend services, operational workflows, institutional coordination and maintainable integration ecosystems."
+
+  },
+
+  "sections": [
+
+    {
+
+      "title": "Integration Engineering",
+
+      "content": [
+
+        "Integration of backend systems across institutional and operational environments.",
+
+        "Coordination between distributed services, workflows and operational platforms.",
+
+        "Engineering participation involving interoperability and maintainable integration ecosystems."
+
+      ]
+
+    },
+
+    {
+
+      "title": "Institutional Environments",
+
+      "content": [
+
+        "GovTech platforms",
+
+        "Operational systems",
+
+        "Regulatory workflows",
+
+        "Institutional integrations",
+
+        "Distributed operational ecosystems"
+
+      ]
+
+    },
+
+    {
+
+      "title": "Workflow Coordination",
+
+      "content": [
+
+        "Operational visibility across distributed engineering systems.",
+
+        "Workflow orchestration involving backend integrations and institutional coordination.",
+
+        "Sustainable systems integration focused on maintainability and operational continuity."
+
+      ]
+
+    }
+
+  ],
+
+  "relatedPages": [
+
+    {
+      "slug": "backend-engineering",
+      "title": "Backend Engineering"
+    },
+
+    {
+      "slug": "govtech",
+      "title": "GovTech Engineering"
+    },
+
+    {
+      "slug": "operational-architecture",
+      "title": "Operational Architecture"
+    }
+
+  ]
+
+}

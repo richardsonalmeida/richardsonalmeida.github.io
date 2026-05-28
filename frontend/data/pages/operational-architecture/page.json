@@ -1,0 +1,105 @@
+{
+  "slug": "operational-architecture",
+
+  "title": "Operational Architecture | Workflow Orchestration & Engineering Coordination",
+
+  "description": "Operational architecture involving workflow orchestration, engineering coordination, maintainable systems and distributed operational platforms.",
+
+  "keywords": [
+
+    "Operational Architecture",
+    "Workflow Orchestration",
+    "Systems Coordination",
+    "Operational Platforms",
+    "Backend Systems",
+    "Distributed Workflows",
+    "Engineering Governance",
+    "CI/CD"
+
+  ],
+
+  "hero": {
+
+    "tag": "Operational Architecture",
+
+    "headline": "Workflow Orchestration & Engineering Coordination",
+
+    "subheadline": "Operational architecture involving maintainable systems, distributed workflows, backend orchestration and engineering sustainability."
+
+  },
+
+  "sections": [
+
+    {
+
+      "title": "Operational Systems",
+
+      "content": [
+
+        "Operational architecture focused on maintainability, workflow continuity and long-term engineering sustainability.",
+
+        "Coordination across distributed systems, backend integrations and operational environments.",
+
+        "Engineering participation involving runtime orchestration and maintainable software ecosystems."
+
+      ]
+
+    },
+
+    {
+
+      "title": "Workflow Engineering",
+
+      "content": [
+
+        "Workflow orchestration",
+
+        "Operational visibility",
+
+        "Distributed coordination",
+
+        "CI/CD-oriented processes",
+
+        "Institutional engineering ecosystems"
+
+      ]
+
+    },
+
+    {
+
+      "title": "Systems Sustainability",
+
+      "content": [
+
+        "Maintainable operational ecosystems designed for institutional continuity.",
+
+        "Alignment between engineering execution and operational realities.",
+
+        "Scalable coordination across backend systems and distributed operational platforms."
+
+      ]
+
+    }
+
+  ],
+  "relatedPages": [
+
+    {
+      "slug": "backend-engineering",
+      "title": "Backend Engineering"
+    },
+
+    {
+      "slug": "systems-integration",
+      "title": "Systems Integration"
+    },
+
+    {
+      "slug": "govtech",
+      "title": "GovTech Engineering"
+    }
+
+  ]
+
+}

@@ -9,6 +9,9 @@ from "../navigation/navigation.controller.js";
 import { initializeRendering }
 from "../rendering/rendering.controller.js";
 
+import { initializeSemanticPage }
+from "../pages/page.controller.js";
+
 
 
 export async function initializeRuntime() {
@@ -106,6 +109,34 @@ async function initializePlatformModules() {
             }
 
     });
+
+    await safelyInitializeModule({
+
+    moduleName:
+        "semantic-pages",
+
+    initialize:
+        async () => {
+
+            await initializeSemanticPage(
+                "backend-engineering"
+            );
+
+            await initializeSemanticPage(
+                "systems-integration"
+            );
+
+            await initializeSemanticPage(
+                "govtech"
+            );
+
+            await initializeSemanticPage(
+                "operational-architecture"
+            );
+
+        }
+
+});
 
 }
 

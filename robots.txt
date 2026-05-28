@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://richardsonalmeida.github.io/sitemap.xml

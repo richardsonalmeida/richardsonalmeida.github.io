@@ -322,6 +322,19 @@ function synchronizeNavigation() {
 
 }
 
+
+/*
+|--------------------------------------------------------------------------
+| Progress Indicator Initialization
+|--------------------------------------------------------------------------
+*/
+
+function initializeProgressIndicators() {
+
+    synchronizeProgressIndicators();
+
+}
+
 /*
 |--------------------------------------------------------------------------
 | Progress Indicators
