@@ -4,33 +4,6 @@
 
 
 /* =========================================================
-   Navigation
-   ========================================================= */
-
-.back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    margin-bottom: 40px;
-
-    font-family: var(--font-sans);
-    font-size: 0.85rem;
-    line-height: 1.4;
-
-    color: var(--color-text-muted);
-
-    text-decoration: none;
-
-    transition: color 0.15s ease;
-}
-
-.back-link:hover {
-    color: var(--color-text);
-}
-
-
-/* =========================================================
    Article metadata
    ========================================================= */
 
@@ -349,10 +322,6 @@ article td {
    ========================================================= */
 
 @media (max-width: 720px) {
-
-    .back-link {
-        margin-bottom: 32px;
-    }
 
     h1 {
         font-size: 2rem;

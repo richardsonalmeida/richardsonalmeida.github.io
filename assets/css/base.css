@@ -240,6 +240,33 @@ header.site-header {
 
 
 /* =========================================================
+   Back link
+   ========================================================= */
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 40px;
+
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    line-height: 1.4;
+
+    color: var(--color-text-muted);
+
+    text-decoration: none;
+
+    transition: color 0.15s ease;
+}
+
+.back-link:hover {
+    color: var(--color-text);
+}
+
+
+/* =========================================================
    Links
    ========================================================= */
 
@@ -318,6 +345,10 @@ footer a:hover {
 
     .nav-links a {
         margin-left: 12px;
+    }
+
+    .back-link {
+        margin-bottom: 32px;
     }
 
     footer {
