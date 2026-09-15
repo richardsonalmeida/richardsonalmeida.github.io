@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richardson Almeida — Ingeniero de Software</title>
+    <link rel="canonical" href="https://richardsonalmeida.github.io/es/">
+    <link rel="alternate" hreflang="en" href="https://richardsonalmeida.github.io/">
+    <link rel="alternate" hreflang="pt-BR" href="https://richardsonalmeida.github.io/pt-br/">
+    <link rel="alternate" hreflang="es" href="https://richardsonalmeida.github.io/es/">
+    <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+    <div class="hero-title">
+        <h1><a href="/es/index.html">Richardson Almeida</a></h1>
+        <p class="role">Ingeniero de Software</p>
+    </div>
+    <div class="nav-right">
+        <div class="lang-switcher">
+            <a href="/index.html">EN</a> · 
+            <a href="/pt-br/index.html">PT</a> · 
+            <a href="/es/index.html" class="active">ES</a>
+        </div>
+        <div class="nav-links">
+            <a href="/es/#projects">Proyectos</a>
+            <a href="/es/articles/">Artículos</a>
+            <a href="/es/#focus">Enfoque</a>
+            <a href="/es/#about">Sobre</a>
+            <a href="https://www.richardsonalmeida.com.br" target="_blank">Negocios ↗</a>
+        </div>
+    </div>
+</header>
+        <div style="margin-bottom: 64px;">
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-muted); margin-bottom: 12px;">Backend e Integración de Sistemas</p>
+            <h2 style="font-size: 1.5rem; margin-bottom: 12px;">Desarrollo backend e integración de sistemas.</h2>
+            <p style="color: var(--color-text-muted); margin-bottom: 24px;">Ingeniero de software con más de 13 años de experiencia en backend, Python, Flask y PostgreSQL.</p>
+            <a href="/Richardson Almeida - Resume.pdf" target="_blank" class="btn">Currículum (PDF) ↗</a>
+        </div>
+        <section id="projects">
+            <h3 style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 24px;">Proyectos Seleccionados</h3>
+            <div class="project-card">
+                <h4 style="font-size: 1.1rem; margin-bottom: 6px;">VIKON</h4>
+                <p style="color: var(--color-text-muted); margin-bottom: 14px;">Sistema de procesamiento de video integrado con IA.</p>
+                <a href="/es/projects/vikon.html" class="project-link">Ver detalles del proyecto →</a>
+            </div>
+            <div class="project-card">
+                <h4 style="font-size: 1.1rem; margin-bottom: 6px;">Digital Presence</h4>
+                <p style="color: var(--color-text-muted); margin-bottom: 14px;">Plataforma de infraestructura digital para negocios.</p>
+                <a href="/es/projects/digital-presence.html" class="project-link">Ver detalles del proyecto →</a>
+            </div>
+        </section>
+        <footer style="border-top: 1px solid var(--color-border); padding-top: 28px; margin-top: 64px; font-size: 0.85rem; color: var(--color-text-muted); display: flex; justify-content: space-between;">
+            <div><strong>Richardson Almeida</strong> — Ingeniero de Software</div>
+            <div><a href="/">EN</a> · <a href="/pt-br/">PT</a> · <a href="/es/">ES</a></div>
+        </footer>
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = window.location.pathname;
+    let cleanPath = path.replace(/^\/pt-br/, "").replace(/^\/es/, "");
+    if (cleanPath === "" || cleanPath === "/") {
+        cleanPath = "/index.html";
+    }
+    const langLinks = document.querySelectorAll(".lang-switcher a");
+    langLinks.forEach(link => {
+        const text = link.textContent.trim();
+        if (text === "EN") {
+            link.href = cleanPath;
+        } else if (text === "PT" || text === "PT-BR") {
+            link.href = "/pt-br" + (cleanPath === "/index.html" ? "/index.html" : cleanPath);
+        } else if (text === "ES") {
+            link.href = "/es" + (cleanPath === "/index.html" ? "/index.html" : cleanPath);
+        }
+    });
+});
+</script>
+
+</body>
+</html>

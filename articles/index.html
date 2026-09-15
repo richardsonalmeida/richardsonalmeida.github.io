@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Articles & Engineering Notes — Richardson Almeida</title>
+    <meta name="description" content="Technical articles on backend engineering, Python, systems integration, and AI architectures by Richardson Almeida.">
+    <link rel="canonical" href="https://richardsonalmeida.github.io/articles/">
+    <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/article.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="hero-title">
+        <h1><a href="/index.html">Richardson Almeida</a></h1>
+        <p class="role">Software Engineer</p>
+    </div>
+    <div class="nav-right">
+        <div class="lang-switcher">
+            <a href="/index.html" class="active">EN</a> · 
+            <a href="/pt-br/index.html">PT</a> · 
+            <a href="/es/index.html">ES</a>
+        </div>
+        <div class="nav-links">
+            <a href="/index.html#projects">Projects</a>
+            <a href="/articles/">Articles</a>
+            <a href="/index.html#focus">Focus</a>
+            <a href="/index.html#about">About</a>
+            <a href="https://www.richardsonalmeida.com.br" target="_blank">Business ↗</a>
+        </div>
+    </div>
+</header>
+    <div class="container">
+        <a href="/index.html" class="back-link">← Back to Portfolio</a>
+        
+        <h1>Articles & Notes</h1>
+        <div class="subtitle">Deep dives into backend systems, architectural decisions, and code patterns.</div>
+
+        <div class="article-card">
+            <div class="article-date">2026 · Architecture & AI</div>
+            <h2 class="article-title"><a href="/articles/vikon-architecture/">Building VIKON: AI-Integrated Video Processing Pipeline</a></h2>
+            <p class="article-desc">An engineering breakdown of how background workers, Whisper, and Flask were structured to transform raw video data into searchable knowledge.</p>
+            <a href="/articles/vikon-architecture/" class="read-more">Read article →</a>
+        </div>
+
+        <footer>
+            <p>© 2026 Richardson Almeida. Evidence over claims.</p>
+        </footer>
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = window.location.pathname;
+    let cleanPath = path.replace(/^\/pt-br/, "").replace(/^\/es/, "");
+    if (cleanPath === "" || cleanPath === "/") {
+        cleanPath = "/index.html";
+    }
+    const langLinks = document.querySelectorAll(".lang-switcher a");
+    langLinks.forEach(link => {
+        const text = link.textContent.trim();
+        if (text === "EN") {
+            link.href = cleanPath;
+        } else if (text === "PT" || text === "PT-BR") {
+            link.href = "/pt-br" + (cleanPath === "/index.html" ? "/index.html" : cleanPath);
+        } else if (text === "ES") {
+            link.href = "/es" + (cleanPath === "/index.html" ? "/index.html" : cleanPath);
+        }
+    });
+});
+</script>
+
+</body>
+</html>

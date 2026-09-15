@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIKON — Engineering Evidence</title>
+    <link rel="canonical" href="https://richardsonalmeida.github.io/projects/vikon.html">
+        <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/project.css">
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+    <div class="hero-title">
+        <h1><a href="/index.html">Richardson Almeida</a></h1>
+        <p class="role">Software Engineer</p>
+    </div>
+    <div class="nav-right">
+        <div class="lang-switcher">
+            <a href="/index.html" class="active">EN</a> · 
+            <a href="/pt-br/index.html">PT</a> · 
+            <a href="/es/index.html">ES</a>
+        </div>
+        <div class="nav-links">
+            <a href="/index.html#projects">Projects</a>
+            <a href="/articles/">Articles</a>
+            <a href="/index.html#focus">Focus</a>
+            <a href="/index.html#about">About</a>
+            <a href="https://www.richardsonalmeida.com.br" target="_blank">Business ↗</a>
+        </div>
+    </div>
+</header>
+        <div style="margin-bottom: 24px;"><a href="/index.html" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-text-muted); text-decoration: none;">← Back to Portfolio</a></div>
+        
+        <h1>VIKON</h1>
+        <div class="subtitle">AI-Integrated Video Processing System</div>
+        <div class="tech-stack">Python · Flask · OpenAI · Whisper · Background Workers</div>
+
+        <section>
+            <h2>01 — Overview & Role</h2>
+            <p><strong>Status:</strong> Evolution / Active Experimentation</p>
+            <p><strong>Role:</strong> System Architecture, Backend Engineering, AI Integration</p>
+            <p>VIKON is an architectural experiment designed to convert raw audiovisual media into structured, searchable knowledge assets using local processing control and AI APIs.</p>
+        </section>
+
+        <section>
+            <h2>02 — Problem</h2>
+            <p>Audio and video files hold dense domain information, but raw recordings lack text indexing, timeline structure, and semantic search capability. Manually transcribing and structuring large media assets creates an extreme operational bottleneck.</p>
+        </section>
+
+        <section>
+            <h2>03 — Architecture</h2>
+            <p>The system is structured as a decoupled backend pipeline:</p>
+            <ul>
+                <li><strong>Ingestion Layer:</strong> Accepts media payloads via controlled endpoints.</li>
+                <li><strong>Processing Worker:</strong> Manages asynchronous execution stages to prevent HTTP blocking during intensive speech-to-text operations.</li>
+                <li><strong>AI Integration Layer:</strong> Interfaces with Whisper for transcription and LLMs for structural summarization.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>04 — Engineering Decisions</h2>
+            <p><strong>Decision: Single-worker pipeline before parallelism.</strong> Prioritized operational predictability and state clarity before introducing distributed worker complexity.</p>
+            <p><strong>Decision: Flask micro-framework.</strong> Chosen for explicit route handling, low framework overhead, and direct integration with SQLAlchemy/custom worker loops.</p>
+        </section>
+
+        <section>
+            <h2>05 — Implementation</h2>
+            <p>Implemented modular Python services adhering to clean separation of concerns. Services communicate through clear internal contracts, isolating core processing logic from web interface concerns.</p>
+        </section>
+
+        <section>
+            <h2>06 — Evidence</h2>
+            <ul class="evidence-list">
+                <li>Repository: <a href="https://github.com/richardsonalmeida" target="_blank">GitHub Organization / Core Repositories ↗</a></li>
+                <li>Documentation: Internal technical notes & architecture outlines.</li>
+                <li>Execution: Background processing logs & local validation artifacts.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>07 — Evolution & Current Status</h2>
+            <p>v0.1 (Proof of Concept) → v0.2 (End-to-End Processing) → v0.3 (Current: Background Worker Refinement). Next steps involve chunked multi-part stream handling.</p>
+        </section>
+
+        <footer>
+            <p>© 2026 Richardson Almeida. Evidence over claims.</p>
+        </footer>
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = window.location.pathname;
+    let cleanPath = path.replace(/^\/pt-br/, "").replace(/^\/es/, "");
+    if (cleanPath === "" || cleanPath === "/") {
+        cleanPath = "/index.html";
+    }
+    const langLinks = document.querySelectorAll(".lang-switcher a");
+    langLinks.forEach(link => {
+        const text = link.textContent.trim();
+        if (text === "EN") {
+            link.href = cleanPath;
+        } else if (text === "PT" || text === "PT-BR") {
+            link.href = "/pt-br" + (cleanPath === "/index.html" ? "/index.html" : cleanPath);
+        } else if (text === "ES") {
+            link.href = "/es" + (cleanPath === "/index.html" ? "/index.html" : cleanPath);
+        }
+    });
+});
+</script>
+
+</body>
+</html>

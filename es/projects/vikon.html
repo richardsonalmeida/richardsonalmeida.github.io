@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIKON — Evidencia de Ingeniería</title>
+    <link rel="canonical" href="https://richardsonalmeida.github.io/es/projects/vikon.html">
+    <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/project.css">
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+    <div class="hero-title">
+        <h1><a href="/es/index.html">Richardson Almeida</a></h1>
+        <p class="role">Ingeniero de Software</p>
+    </div>
+    <div class="nav-right">
+        <div class="lang-switcher">
+            <a href="/index.html">EN</a> · 
+            <a href="/pt-br/index.html">PT</a> · 
+            <a href="/es/index.html" class="active">ES</a>
+        </div>
+        <div class="nav-links">
+            <a href="/es/#projects">Proyectos</a>
+            <a href="/es/articles/">Artículos</a>
+            <a href="/es/#focus">Enfoque</a>
+            <a href="/es/#about">Sobre</a>
+            <a href="https://www.richardsonalmeida.com.br" target="_blank">Negocios ↗</a>
+        </div>
+    </div>
+</header>
+        <div style="margin-bottom: 24px;"><a href="/es/" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-text-muted); text-decoration: none;">← Volver al Inicio</a></div>
+        <h1>VIKON</h1>
+        <p style="color: var(--color-text-muted); margin-bottom: 24px;">Sistema de Procesamiento de Video Integrado con IA</p>
+        <section>
+            <h2>Resumen y Rol</h2>
+            <p><strong>Estado:</strong> Evolución / Experimentación Activa</p>
+            <p><strong>Rol:</strong> Arquitectura de Sistemas, Ingeniería Backend, Integración de IA</p>
+            <p>VIKON es un experimento arquitectónico diseñado para convertir contenido audiovisual bruto en conocimiento estructurado.</p>
+        </section>
+        <footer style="border-top: 1px solid var(--color-border); padding-top: 24px; color: var(--color-text-muted); font-size: 0.85rem;">
+            <p>© 2026 Richardson Almeida. Evidencias sobre promesas.</p>
+        </footer>
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = window.location.pathname;
+    let cleanPath = path.replace(/^\/pt-br/, "").replace(/^\/es/, "");
+    if (cleanPath === "" || cleanPath === "/") {
+        cleanPath = "/index.html";
+    }
+    const langLinks = document.querySelectorAll(".lang-switcher a");
+    langLinks.forEach(link => {
+        const text = link.textContent.trim();
+        if (text === "EN") {
+            link.href = cleanPath;
+        } else if (text === "PT" || text === "PT-BR") {
+            link.href = "/pt-br" + (cleanPath === "/index.html" ? "/index.html" : cleanPath);
+        } else if (text === "ES") {
+            link.href = "/es" + (cleanPath === "/index.html" ? "/index.html" : cleanPath);
+        }
+    });
+});
+</script>
+
+</body>
+</html>

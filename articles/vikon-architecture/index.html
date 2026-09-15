@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building VIKON: AI-Integrated Video Processing Pipeline — Richardson Almeida</title>
+    <meta name="description" content="Technical breakdown of VIKON: an architectural experiment in Python, Flask, and background workers for transforming audiovisual media into structured knowledge.">
+    
+    <!-- SEO & Canonical -->
+    <link rel="canonical" href="https://richardsonalmeida.github.io/articles/vikon-architecture/">
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <!-- Open Graph / LinkedIn -->
+    <meta property="og:title" content="Building VIKON: AI-Integrated Video Processing Pipeline">
+    <meta property="og:description" content="Technical deep-dive into the backend architecture and decision-making behind VIKON.">
+    <meta property="og:url" content="https://richardsonalmeida.github.io/articles/vikon-architecture/">
+    <meta property="og:type" content="article">
+
+        <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/article.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="hero-title">
+        <h1><a href="/index.html">Richardson Almeida</a></h1>
+        <p class="role">Software Engineer</p>
+    </div>
+    <div class="nav-right">
+        <div class="lang-switcher">
+            <a href="/index.html" class="active">EN</a> · 
+            <a href="/pt-br/index.html">PT</a> · 
+            <a href="/es/index.html">ES</a>
+        </div>
+        <div class="nav-links">
+            <a href="/index.html#projects">Projects</a>
+            <a href="/articles/">Articles</a>
+            <a href="/index.html#focus">Focus</a>
+            <a href="/index.html#about">About</a>
+            <a href="https://www.richardsonalmeida.com.br" target="_blank">Business ↗</a>
+        </div>
+    </div>
+</header>
+    <div class="container">
+        <a href="/articles/" class="back-link">← Back to Articles</a>
+        
+        <div class="article-meta">Published 2026 · Architecture & Backend</div>
+        <h1>Building VIKON: AI-Integrated Video Processing Pipeline</h1>
+        
+        <div class="lead">
+            An architectural breakdown of how background workers, local transcription services, and Flask were structured to transform raw audiovisual media into structured, searchable knowledge.
+        </div>
+
+        <h2>The Problem</h2>
+        <p>Audiovisual recordings contain high-density domain knowledge, but raw media files are fundamentally unstructured. Without text indexing, timeline segmentation, or semantic querying, searching through hours of internal video assets requires manual review—creating an unacceptable operational bottleneck.</p>
+
+        <h2>Architectural Design</h2>
+        <p>To solve this without adopting overly complex distributed orchestration tools prematurely, VIKON was designed around a clean, decoupled backend pipeline:</p>
+        <ul>
+            <li><strong>Ingestion:</strong> Receives payloads via explicit Flask endpoints with schema validation.</li>
+            <li><strong>Background Execution:</strong> Offloads heavy speech-to-text operations (Whisper) to asynchronous workers to prevent HTTP thread blocking.</li>
+            <li><strong>Knowledge Extraction:</strong> Normalizes transcription results into structured records for retrieval.</li>
+        </ul>
+
+        <h2>Key Engineering Decisions</h2>
+        <p><strong>1. Single-worker resilience over premature parallelism.</strong> Before introducing message brokers and complex cluster scaling, the pipeline prioritized deterministic execution flow and clear error-handling boundaries.</p>
+        <p><strong>2. Framework minimalism.</strong> Flask was chosen over heavier alternatives to maintain absolute transparency over routing, middleware execution, and database connection lifecycles via SQLAlchemy.</p>
+
+        <h2>Conclusion</h2>
+        <p>VIKON demonstrates how practical Python backends can integrate modern AI workloads effectively when kept proportional to the actual operational scale.</p>
+
+        <footer>
+            <p>© 2026 Richardson Almeida. Evidence over claims.</p>
+        </footer>
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = window.location.pathname;
+    let cleanPath = path.replace(/^\/pt-br/, "").replace(/^\/es/, "");
+    if (cleanPath === "" || cleanPath === "/") {
+        cleanPath = "/index.html";
+    }
+    const langLinks = document.querySelectorAll(".lang-switcher a");
+    langLinks.forEach(link => {
+        const text = link.textContent.trim();
+        if (text === "EN") {
+            link.href = cleanPath;
+        } else if (text === "PT" || text === "PT-BR") {
+            link.href = "/pt-br" + (cleanPath === "/index.html" ? "/index.html" : cleanPath);
+        } else if (text === "ES") {
+            link.href = "/es" + (cleanPath === "/index.html" ? "/index.html" : cleanPath);
+        }
+    });
+});
+</script>
+
+</body>
+</html>

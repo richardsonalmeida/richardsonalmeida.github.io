@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construyendo VIKON — Richardson Almeida</title>
+    <link rel="canonical" href="https://richardsonalmeida.github.io/es/articles/vikon-architecture/">
+    <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="stylesheet" href="../../../assets/css/base.css">
+    <link rel="stylesheet" href="../../../assets/css/article.css">
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+    <div class="hero-title">
+        <h1><a href="/es/index.html">Richardson Almeida</a></h1>
+        <p class="role">Ingeniero de Software</p>
+    </div>
+    <div class="nav-right">
+        <div class="lang-switcher">
+            <a href="/index.html">EN</a> · 
+            <a href="/pt-br/index.html">PT</a> · 
+            <a href="/es/index.html" class="active">ES</a>
+        </div>
+        <div class="nav-links">
+            <a href="/es/#projects">Proyectos</a>
+            <a href="/es/articles/">Artículos</a>
+            <a href="/es/#focus">Enfoque</a>
+            <a href="/es/#about">Sobre</a>
+            <a href="https://www.richardsonalmeida.com.br" target="_blank">Negocios ↗</a>
+        </div>
+    </div>
+</header>
+        <div style="margin-bottom: 24px;"><a href="/es/articles/" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-text-muted); text-decoration: none;">← Volver a los Artículos</a></div>
+        <h1>Construyendo VIKON: Pipeline de Procesamiento de Video con IA</h1>
+        <p style="font-size: 1.15rem; color: var(--color-text-muted); margin-bottom: 40px;">Un análisis arquitectónico de cómo workers asíncronos y Flask transforman medios audiovisuales en conocimiento estructurado.</p>
+        <h2>El Problema</h2>
+        <p>Las grabaciones contienen datos densos pero carecen de indexación semántica. Procesarlas manualmente genera cuellos de botella operativos.</p>
+        <h2>Decisiones de Ingeniería</h2>
+        <p>Se priorizó la resiliencia de worker único y la simplicidad de Flask para mantener transparencia total sobre el ciclo de vida.</p>
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = window.location.pathname;
+    let cleanPath = path.replace(/^\/pt-br/, "").replace(/^\/es/, "");
+    if (cleanPath === "" || cleanPath === "/") {
+        cleanPath = "/index.html";
+    }
+    const langLinks = document.querySelectorAll(".lang-switcher a");
+    langLinks.forEach(link => {
+        const text = link.textContent.trim();
+        if (text === "EN") {
+            link.href = cleanPath;
+        } else if (text === "PT" || text === "PT-BR") {
+            link.href = "/pt-br" + (cleanPath === "/index.html" ? "/index.html" : cleanPath);
+        } else if (text === "ES") {
+            link.href = "/es" + (cleanPath === "/index.html" ? "/index.html" : cleanPath);
+        }
+    });
+});
+</script>
+
+</body>
+</html>

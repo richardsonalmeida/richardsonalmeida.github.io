@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artigos Técnicos & Notas de Engenharia — Richardson Almeida</title>
+    <link rel="canonical" href="https://richardsonalmeida.github.io/pt-br/articles/">
+    <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/article.css">
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+    <div class="hero-title">
+        <h1><a href="/pt-br/index.html">Richardson Almeida</a></h1>
+        <p class="role">Engenheiro de Software</p>
+    </div>
+    <div class="nav-right">
+        <div class="lang-switcher">
+            <a href="/index.html">EN</a> · 
+            <a href="/pt-br/index.html" class="active">PT</a> · 
+            <a href="/es/index.html">ES</a>
+        </div>
+        <div class="nav-links">
+            <a href="/pt-br/#projects">Projetos</a>
+            <a href="/pt-br/articles/">Artigos</a>
+            <a href="/pt-br/#focus">Foco</a>
+            <a href="/pt-br/#about">Sobre</a>
+            <a href="https://www.richardsonalmeida.com.br" target="_blank">Negócios ↗</a>
+        </div>
+    </div>
+</header>
+        <div style="margin-bottom: 24px;"><a href="/pt-br/" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-text-muted); text-decoration: none;">← Voltar ao Início</a></div>
+        <h1>Artigos & Notas</h1>
+        <p style="color: var(--color-text-muted); margin-bottom: 32px;">Aprofundamentos em sistemas backend, decisões arquiteturais e padrões de código.</p>
+        <div class="article-card">
+            <h3 style="font-size: 1.15rem; margin-bottom: 8px;"><a href="/pt-br/articles/vikon-architecture/" style="color: var(--color-text); text-decoration: none;">Construindo o VIKON: Pipeline de Processamento de Vídeo com IA</a></h3>
+            <p style="font-size: 0.95rem; color: var(--color-text-muted);">Análise de engenharia sobre como workers em background e Whisper estruturam mídia em conhecimento.</p>
+        </div>
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = window.location.pathname;
+    let cleanPath = path.replace(/^\/pt-br/, "").replace(/^\/es/, "");
+    if (cleanPath === "" || cleanPath === "/") {
+        cleanPath = "/index.html";
+    }
+    const langLinks = document.querySelectorAll(".lang-switcher a");
+    langLinks.forEach(link => {
+        const text = link.textContent.trim();
+        if (text === "EN") {
+            link.href = cleanPath;
+        } else if (text === "PT" || text === "PT-BR") {
+            link.href = "/pt-br" + (cleanPath === "/index.html" ? "/index.html" : cleanPath);
+        } else if (text === "ES") {
+            link.href = "/es" + (cleanPath === "/index.html" ? "/index.html" : cleanPath);
+        }
+    });
+});
+</script>
+
+</body>
+</html>

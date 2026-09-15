@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Presence — Engineering Evidence</title>
+    <link rel="canonical" href="https://richardsonalmeida.github.io/projects/digital-presence.html">
+        <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/project.css">
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+    <div class="hero-title">
+        <h1><a href="/index.html">Richardson Almeida</a></h1>
+        <p class="role">Software Engineer</p>
+    </div>
+    <div class="nav-right">
+        <div class="lang-switcher">
+            <a href="/index.html" class="active">EN</a> · 
+            <a href="/pt-br/index.html">PT</a> · 
+            <a href="/es/index.html">ES</a>
+        </div>
+        <div class="nav-links">
+            <a href="/index.html#projects">Projects</a>
+            <a href="/articles/">Articles</a>
+            <a href="/index.html#focus">Focus</a>
+            <a href="/index.html#about">About</a>
+            <a href="https://www.richardsonalmeida.com.br" target="_blank">Business ↗</a>
+        </div>
+    </div>
+</header>
+        <div style="margin-bottom: 24px;"><a href="/index.html" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-text-muted); text-decoration: none;">← Back to Portfolio</a></div>
+        
+        <h1>Digital Presence</h1>
+        <div class="subtitle">Business Digital Infrastructure Platform</div>
+        <div class="tech-stack">Python · Flask · SQLAlchemy · PostgreSQL · REST APIs</div>
+
+        <section>
+            <h2>01 — Overview & Role</h2>
+            <p><strong>Status:</strong> Production</p>
+            <p><strong>Role:</strong> Full-Stack Backend Architecture, Database Design, Deployment</p>
+            <p>A structured platform designed to bridge relational business data with public web presentation and conversion workflows for small enterprises.</p>
+        </section>
+
+        <section>
+            <h2>02 — Problem</h2>
+            <p>Small business owners often rely on fragmented social media profiles or rigid third-party site builders that lack relational data control, flexible catalog structuring, and robust API integration capability.</p>
+        </section>
+
+        <section>
+            <h2>03 — Architecture</h2>
+            <p>Structured using a traditional relational backend layout:</p>
+            <ul>
+                <li><strong>Database Model:</strong> PostgreSQL managed via SQLAlchemy ORM enforcing strict entity relationships (Products, Services, Business Information).</li>
+                <li><strong>Presentation Layer:</strong> Server-side rendered templates backed by clean CSS layouts for optimal SEO indexing.</li>
+                <li><strong>Conversion Hook:</strong> Integrated direct messaging / action triggers to streamline user conversion.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>04 — Engineering Decisions</h2>
+            <p><strong>Decision: Relational storage over NoSQL.</strong> Business data entities require strong relational integrity and deterministic queries.</p>
+            <p><strong>Decision: Monolithic modular layout.</strong> Eliminates unnecessary microservice latency for bounded business web applications.</p>
+        </section>
+
+        <section>
+            <h2>05 — Implementation</h2>
+            <p>Built with robust input validation, secure environment configuration, and structured database migrations to ensure long-term maintainability.</p>
+        </section>
+
+        <section>
+            <h2>06 — Evidence</h2>
+            <ul class="evidence-list">
+                <li>Live System: <a href="https://www.richardsonalmeida.com.br" target="_blank">richardsonalmeida.com.br ↗</a></li>
+                <li>Repository: <a href="https://github.com/richardsonalmeida" target="_blank">GitHub Organization ↗</a></li>
+                <li>Documentation: System architecture & schema blueprints.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>07 — Evolution & Current Status</h2>
+            <p>Active in production supporting structured business solutions, with ongoing iterations to enhance SEO telemetry and form management.</p>
+        </section>
+
+        <footer>
+            <p>© 2026 Richardson Almeida. Evidence over claims.</p>
+        </footer>
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const path = window.location.pathname;
+    let cleanPath = path.replace(/^\/pt-br/, "").replace(/^\/es/, "");
+    if (cleanPath === "" || cleanPath === "/") {
+        cleanPath = "/index.html";
+    }
+    const langLinks = document.querySelectorAll(".lang-switcher a");
+    langLinks.forEach(link => {
+        const text = link.textContent.trim();
+        if (text === "EN") {
+            link.href = cleanPath;
+        } else if (text === "PT" || text === "PT-BR") {
+            link.href = "/pt-br" + (cleanPath === "/index.html" ? "/index.html" : cleanPath);
+        } else if (text === "ES") {
+            link.href = "/es" + (cleanPath === "/index.html" ? "/index.html" : cleanPath);
+        }
+    });
+});
+</script>
+
+</body>
+</html>
