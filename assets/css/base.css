@@ -53,6 +53,8 @@
     --content-width: 680px;
     --wide-width: 920px;
 
+    --header-height: 100px;
+
 
     /* =====================================================
        Spacing
@@ -120,11 +122,29 @@ header.site-header {
     justify-content: space-between;
     align-items: flex-start;
 
-    margin-bottom: var(--space-16);
+    margin-bottom: var(--space-6);
 
     padding-bottom: var(--space-6);
 
     border-bottom: 1px solid var(--color-border);
+
+    background: var(--color-bg);
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+/* Neutraliza regras globais de h1 (ex.: article.css) dentro do header */
+header.site-header h1 {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    margin: 0;
+    max-width: none;
+    color: inherit;
 }
 
 
@@ -434,15 +454,16 @@ footer a:hover {
     .sidebar {
         display: block;
 
-        position: fixed;
-        top: 60px;
-        left: 20px;
+        position: sticky;
+        top: calc(var(--header-height) + var(--space-6));
+        align-self: start;
 
         width: 200px;
     }
 
     .sidebar + .container {
         margin-left: 240px;
+        padding-top: var(--space-10);
     }
 
     .sidebar + .container header.site-header .nav-links {
