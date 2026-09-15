@@ -463,6 +463,8 @@ footer a:hover {
 
     .sidebar + .container {
         margin-left: 240px;
+        margin-right: 0;
+        max-width: var(--wide-width);
         padding-top: var(--space-10);
     }
 
