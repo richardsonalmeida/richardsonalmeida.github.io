@@ -289,7 +289,8 @@ section {
    ENGINEERING APPROACH
    ========================================================= */
 
-.approach-grid {
+.approach-grid,
+.approach-cycle-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0 40px;
@@ -304,7 +305,8 @@ section {
     padding: 20px 0 24px;
 }
 
-.approach-number {
+.approach-number,
+.step-num {
     font-family: var(--font-mono);
     font-size: 0.7rem;
 
@@ -406,7 +408,8 @@ section {
     }
 
     .focus-grid,
-    .approach-grid {
+    .approach-grid,
+    .approach-cycle-grid {
         grid-template-columns: 1fr;
         gap: 0;
     }
