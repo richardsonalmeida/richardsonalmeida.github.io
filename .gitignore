@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Playwright
+playwright-report/
+test-results/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Temporarios
+*.bak
+*.tmp
+*.log
+
+# Local
+.env
