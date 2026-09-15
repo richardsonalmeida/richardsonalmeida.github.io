@@ -10,6 +10,22 @@
     <link rel="stylesheet" href="../../../assets/css/article.css">
 </head>
 <body>
+    <aside class="sidebar" aria-label="Navegação lateral">
+
+        <nav class="sidebar-nav">
+
+            <a href="/pt-br/#projects">Projetos</a>
+            <a href="/pt-br/articles/">Artigos</a>
+            <a href="/pt-br/#focus">Foco</a>
+            <a href="/pt-br/#about">Sobre</a>
+            <a href="https://www.richardsonalmeida.com.br"
+               target="_blank"
+               rel="noopener noreferrer">Negócios ↗</a>
+
+        </nav>
+
+    </aside>
+
     <div class="container">
         <header class="site-header">
     <div class="hero-title">
@@ -31,6 +47,8 @@
         </div>
     </div>
 </header>
+
+        <main>
         <div style="margin-bottom: 24px;"><a href="/pt-br/articles/" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-text-muted); text-decoration: none;">← Voltar aos Artigos</a></div>
         <h1>Construindo o VIKON: Pipeline de Processamento de Vídeo com IA</h1>
         <p style="font-size: 1.15rem; color: var(--color-text-muted); margin-bottom: 40px;">Uma análise arquitetural de como workers assíncronos e Flask transformam mídia audiovisual bruta em conhecimento estruturado.</p>
@@ -38,6 +56,8 @@
         <p>Gravações audiovisuais contêm dados densos, mas carecem de indexação de texto semântico. Processar isso manualmente gera gargalos operacionais massivos.</p>
         <h2>Decisões de Engenharia</h2>
         <p>Priorizou-se resiliência de worker único e simplicidade do framework Flask para manter transparência total sobre o ciclo de vida das requisições.</p>
+        </main>
+
     </div>
 
 <script>
