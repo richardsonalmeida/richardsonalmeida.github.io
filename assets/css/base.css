@@ -1,3 +1,7 @@
+/* =========================================================
+   Tokens
+   ========================================================= */
+
 :root {
     /* =====================================================
        Color system
@@ -124,7 +128,37 @@ header.site-header {
 }
 
 
-/* Identity */
+/* =========================================================
+   Sidebar (navegação lateral)
+   ========================================================= */
+
+.sidebar {
+    display: none;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+
+    font-size: 0.84rem;
+}
+
+.sidebar-nav a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+
+    transition: color 0.15s ease;
+}
+
+.sidebar-nav a:hover {
+    color: var(--color-text);
+}
+
+
+/* =========================================================
+   Identity
+   ========================================================= */
 
 .hero-title h1 a {
     color: inherit;
@@ -387,5 +421,31 @@ footer a:hover {
 
     .nav-links a {
         margin-left: 0;
+    }
+}
+
+
+/* =========================================================
+   Desktop sidebar (≥ 900px)
+   ========================================================= */
+
+@media (min-width: 900px) {
+
+    .sidebar {
+        display: block;
+
+        position: fixed;
+        top: 60px;
+        left: 20px;
+
+        width: 200px;
+    }
+
+    .sidebar + .container {
+        margin-left: 240px;
+    }
+
+    .sidebar + .container header.site-header .nav-links {
+        display: none;
     }
 }
